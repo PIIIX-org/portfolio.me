@@ -1,14 +1,22 @@
 ---
 description: Forge a personal portfolio site — interview to deployed URL, with human gates.
+argument-hint: "<name | github handle | \"my portfolio\">"
 ---
 
-Run the portfolio.me pipeline for: $ARGUMENTS
+Invoke the **portfolio.me** skill and run the pipeline for: `$ARGUMENTS`
 
-Read `skills/portfolio.me/SKILL.md` and follow it. Read `PRINCIPLES.md` first —
-five of those rules are hard and cannot be skipped.
+Read `PRINCIPLES.md` first. Five of those rules are hard and cannot be skipped:
+evidence-backed claims (`§5`), accessibility basics (`§12`), reversible deploys
+(`§15`), Gate C (`§16`), and identity safety (`§20`).
 
-Updating a site this pipeline already built? Enter at `loops/08-rerun.md` instead.
+Run loops 0 through 7 in order, holding Gates A, B1, B2, and C for the human. You run
+the interview, the synthesis, the concepts, and every gate yourself. Dispatch the
+worker agents for the rest, each at the tier its work needs (`MODELS.md`).
 
-If no subject was given, ask who this is for. Then start at Loop 0.
+Settle the site shape at Gate A — single page, multi-page, or multi-page with a blog
+(`ARCHITECTURE.md`). It decides the stack, so it cannot wait for the build.
 
-Hold every gate. Never publish past one without a human decision.
+If no subject was given, ask who this is for. If the site already exists and this is
+an update, enter at `loops/08-rerun.md` instead of Loop 0.
+
+Never publish past a gate without a human decision.
