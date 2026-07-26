@@ -43,7 +43,8 @@ The binding rules are in [`PRINCIPLES.md`](./PRINCIPLES.md). Read them first. Th
 supporting doctrine: [`BRAND.md`](./BRAND.md) (strategy),
 [`ARCHITECTURE.md`](./ARCHITECTURE.md) (how many pages, and the blog),
 [`STYLES.md`](./STYLES.md) (what it looks like), [`CRAFT.md`](./CRAFT.md) (how you
-render it), [`SKIPPING.md`](./SKIPPING.md) (what it costs to leave a step out).
+render it), [`MODELS.md`](./MODELS.md) (which tier runs which step),
+[`SKIPPING.md`](./SKIPPING.md) (what it costs to leave a step out).
 
 There is also a mode rather than a loop: [`loops/08-rerun.md`](./loops/08-rerun.md),
 entered instead of Loop 0 when updating a site this pipeline already built.
@@ -106,6 +107,12 @@ the deploy step are never delegated.
 | `case-study-writer` | 3 | One per project: draft from evidence in the subject's voice |
 | `section-builder` | 4 | One per section: code to the approved image |
 | `site-verifier` | 7 | Live checklist, three widths, a11y, perf, report |
+
+Each is dispatched at the tier its work needs ([`MODELS.md`](./MODELS.md)) — low for
+mining, scraping, and checklists; mid for anything following a spec. The conductor
+sets this without asking. What it cannot set is its own model, so the top-tier steps
+(the interview, the synthesis, the concepts, every gate) are a one-line mention to
+the human at the boundary and never a blocker.
 
 ## The run ledger
 

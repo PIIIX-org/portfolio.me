@@ -22,6 +22,13 @@ corroborate. The scrape verifies and fills gaps.
 
 **The conductor runs this. Never delegate it** — a subagent cannot talk to the human.
 
+This is the most expensive step in the pipeline to get wrong, and the instinct to
+run discovery cheap is exactly backwards ([`MODELS.md`](../MODELS.md)). Everything
+downstream consumes `BRIEF.md`. A shallow interview produces eight shallow loops and
+Loop 4 cannot repair it. If the session is on a lower tier, say so once here and
+continue either way. The scrape in 1b and 1c is the cheap part, and it runs at the
+bottom tier in parallel.
+
 Ask **one question at a time**. Open-ended. Do not offer multiple choice: the answer
 has to be theirs, and a list of options contaminates it with yours. Follow the
 thread where it goes. React to what they actually said before moving on.

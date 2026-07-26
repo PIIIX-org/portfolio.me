@@ -43,6 +43,12 @@ a Persian or Arabic subject needs a face that actually draws it.
 
 ### Concepts
 
+Top-tier work, and the conductor does it rather than a worker
+([`MODELS.md`](../MODELS.md)). The collision, the opening move, and the thing nobody
+expects are what `§1–3` are asking for, and a cheaper model reaches for the category
+reflex those rules exist to prevent. Mention the tier once if the session is lower,
+then carry on.
+
 Generate **2–3 distinct concepts** (`§4`). Each states:
 
 - The **collision or subversion** — this run's `§3` answer, written as one sentence.

@@ -33,6 +33,7 @@ a prototype before the design leans on it, and every claim traces to a source.
 | [`PRINCIPLES.md`](./PRINCIPLES.md) | The binding rules. Five are hard and never skip |
 | [`BRAND.md`](./BRAND.md) | Strategy: archetype, positioning, voice, the translation table |
 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How many pages, how they route, and the blog |
+| [`MODELS.md`](./MODELS.md) | Which model tier runs which step, and why the interview is not the cheap part |
 | [`STYLES.md`](./STYLES.md) | What it looks like. 32 styles, and how to collide them |
 | [`CRAFT.md`](./CRAFT.md) | How you render it. The technique arsenal |
 | [`SKIPPING.md`](./SKIPPING.md) | What every step costs to leave out |

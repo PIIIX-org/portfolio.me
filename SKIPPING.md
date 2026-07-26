@@ -49,6 +49,7 @@ Each loop file repeats its own row. This is the whole map.
 | **5 Conversion path** | The reason the site exists. Someone decides to reach out and finds no way to. |
 | **6 Deploy** | Nothing goes live. Output is a build folder plus run instructions. A legitimate end state — handoff mode. |
 | **7 Verify** | Confirmation it renders on real devices. `§14` says look at it; skipping means the first person to see it live is a stranger. |
+| **Model tiering** | Matching the model to the work ([`MODELS.md`](./MODELS.md)). On a top-tier session you lose only budget. On a low-tier one the mechanical loops are fine and the judgment loops show it: flatter interview questions, concepts closer to the category reflex, a voice pass that reads like a model writing in someone's voice. The quiet skip — none of it fails a Loop 7 check. The site passes and it is a worse site. Note the session tier here so the grade means something. |
 | **CV export** | A résumé that stays in sync with the site. |
 | **i18n / RTL** | Only skippable when there is one language and it's LTR. Otherwise `§17` applies and it isn't optional. |
 | **Legal (imprint/privacy)** | Only skippable when nothing is collected. If there's a form, EU users make it a legal requirement, not a preference. |

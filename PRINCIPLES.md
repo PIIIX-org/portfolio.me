@@ -249,3 +249,20 @@ because it puts sentences in a real person's mouth that they can be shown later.
 
 Where it is unclear whether someone agreed to be quoted publicly, the subject
 confirms before it ships.
+
+## 24. Match the model tier to the cost of being wrong.
+
+A step whose mistake the next command catches is cheap to get wrong. A step whose
+output every later loop consumes is not, and no amount of downstream quality repairs
+it. Dispatch workers at the tier the work needs
+([`MODELS.md`](./MODELS.md)) without asking — that is a routine call, not a decision
+worth interrupting a human for.
+
+The interview and the synthesis are top tier; the scrape is not. They come early,
+which makes the instinct to run them cheap strong and wrong: a shallow `BRIEF.md`
+produces eight shallow loops, and Loop 4 cannot repair Loop 1.
+
+A conductor cannot change its own model. When a run enters a top-tier stretch on a
+lower-tier session, say so once, in one line, and continue either way. Never
+de-escalate mid-loop to save budget, and never treat the tier a step ran at as a
+defense for a failed check.

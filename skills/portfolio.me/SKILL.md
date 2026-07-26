@@ -15,6 +15,23 @@ accessibility basics (`§12`), reversible deploys (`§15`), Gate C (`§16`), and
 identity safety (`§20`). Everything else the human may skip, at a cost you state
 once and record ([`SKIPPING.md`](../../SKIPPING.md)).
 
+## Model tiers
+
+Dispatch each worker at the tier its work needs ([`MODELS.md`](../../MODELS.md)) and
+do not ask: low for `evidence-miner` and `site-verifier`, mid for `peer-analyst`,
+`section-designer`, `technique-prototyper`, `case-study-writer`, and
+`section-builder`.
+
+You cannot change your own model. The steps you run yourself that want the top tier
+are the interview, the synthesis, the concepts, the technique assignment, the voice
+pass, and every gate. When one is next on a lower-tier session, say so once in a
+line and continue either way:
+
+> Loop 2a next, which is the concept work. It goes better on the top tier if you
+> want to switch with `/model`. Say the word and I will carry on as is.
+
+Once. Not at every step, and not again after they decline.
+
 ## What you never delegate
 
 Subagents cannot talk to the human. **You** run the interview, **you** hold every

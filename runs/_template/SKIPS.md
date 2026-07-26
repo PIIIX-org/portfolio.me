@@ -13,6 +13,12 @@ Empty file means the full pipeline ran.
 
 Full pipeline / Express mode.
 
+## Session tier
+
+Which model ran the conductor's steps, and whether tiering was applied to the workers
+(`MODELS.md`). A low-tier session on the judgment loops does not fail any Loop 7
+check and still costs quality, so it belongs in the grade.
+
 ## Grade ceiling
 
 <A if nothing skipped; B if express; lower per SKIPPING.md>
