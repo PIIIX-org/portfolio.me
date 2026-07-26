@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="276" height="32" viewBox="0 0 276 32" role="img" aria-label="Forged with portfolio.me, created by PIIIX">
+<title>Forged with portfolio.me, created by PIIIX</title>
+<style>
+  .spark { animation: pulse 1.9s ease-in-out infinite; transform-origin: 15.0px 16.0px; }
+  .ring  { animation: bloom 1.9s ease-out infinite; transform-origin: 15.0px 16.0px; }
+  @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .45 } }
+  @keyframes bloom { 0% { r: 3; opacity: .55 } 100% { r: 9; opacity: 0 } }
+  @media (prefers-reduced-motion: reduce) {
+    .spark, .ring { animation: none }
+    .ring { opacity: 0 }
+  }
+</style>
+<rect x=".5" y=".5" width="275" height="31" rx="8" fill="#0F0E13" stroke="#FF5C39" stroke-opacity=".45"/>
+<circle class="ring" cx="15.0" cy="16.0" r="3" fill="none" stroke="#FF5C39" stroke-width=".9"/>
+<circle class="spark" cx="15.0" cy="16.0" r="3.1" fill="#FF5C39"/>
+<text x="26.0" y="20.4" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" font-weight="500" fill="#B4B7C4">Forged with <tspan fill="#FFFFFF" font-weight="700">portfolio.me</tspan></text>
+<line x1="215.48" y1="9" x2="215.48" y2="23" stroke="#B4B7C4" stroke-opacity=".3"/>
+<text x="224.48" y="20.4" font-family="SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" font-weight="500" fill="#B4B7C4">PIIIX</text>
+</svg>

@@ -1,0 +1,9 @@
+# portfolio.me
+
+This repo is the portfolio.me pipeline: turn a person into a deployed portfolio
+site. To run it, read AGENTS.md and PRINCIPLES.md, then work loops/00-bootstrap.md
+through loops/07-verify.md in order, stopping at Gates A, B1, B2, and C for the
+human. Five rules are hard and never skip: every claim traces to evidence,
+accessibility basics, reversible deploys, Gate C, and identity safety. Interview
+first (it is the only source of the story), generate every visual, self-host every
+asset, and verify the live site by screenshot.

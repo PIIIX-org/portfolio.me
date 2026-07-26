@@ -1,5 +1,18 @@
 # portfolio.me
 
+<p align="center">
+  <img src="assets/badges/forged-with.svg" alt="Forged with portfolio.me, created by PIIIX" height="32">
+</p>
+
+<p align="center">
+  <img src="assets/badges/loops.svg" alt="8 loops" height="32">
+  <img src="assets/badges/gates.svg" alt="4 human gates" height="32">
+  <img src="assets/badges/agents.svg" alt="7 worker agents" height="32">
+  <img src="assets/badges/targets.svg" alt="9 deploy targets" height="32">
+  <img src="assets/badges/rules.svg" alt="25 binding rules" height="32">
+  <img src="assets/badges/runs.svg" alt="portfolios forged" height="32">
+</p>
+
 Turns a person into a deployed portfolio site. Interviewed, positioned, designed,
 built, and live on infrastructure they chose.
 

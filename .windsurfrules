@@ -1,0 +1,10 @@
+# portfolio.me
+
+This repo is the portfolio.me pipeline for building one-of-a-kind personal
+portfolio sites. To run it, read AGENTS.md and PRINCIPLES.md, then execute
+loops/00-bootstrap.md through loops/07-verify.md in order, stopping at the four
+human gates. The interview comes first and is the highest-value step: it is the
+only source of the story and the voice. Generate every visual rather than
+hotlinking, vendor and self-host every library, ship a designed reduced-motion
+state for every animation, snapshot before deploying, and confirm the live render
+with a screenshot. Nothing goes public without the human seeing it at Gate C.

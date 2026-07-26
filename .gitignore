@@ -1,3 +1,8 @@
 .DS_Store
 .impeccable/
 node_modules/
+
+# Real runs stay local; this repo keeps the template and the doctrine.
+runs/*
+!runs/_template/
+!runs/_template/**

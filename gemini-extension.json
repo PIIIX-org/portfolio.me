@@ -1,0 +1,6 @@
+{
+  "name": "portfolio.me",
+  "version": "0.2.0",
+  "description": "portfolio.me turns a person into a deployed portfolio site: interview, strategy, design, copy, build, deploy, verify, with four human gates.",
+  "contextFileName": "AGENTS.md"
+}

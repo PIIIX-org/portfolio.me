@@ -1,0 +1,16 @@
+---
+description: portfolio.me — build a one-of-a-kind personal portfolio site (interview → strategy → design → build → deploy → verify, human gates)
+alwaysApply: false
+---
+
+This repository is the **portfolio.me** pipeline. When asked to design, redesign, or
+build a personal portfolio site, run it:
+
+1. Read `AGENTS.md` and `PRINCIPLES.md` (25 binding rules, five of them hard).
+2. Execute `loops/00-bootstrap.md` → `loops/07-verify.md` in order.
+3. Stop at the four human gates (A: strategy, B1: concept, B2: technique, C: final
+   before it goes public — that one never skips).
+4. Interview before anything else; it is the only source of the story and the
+   voice, and every later loop consumes it.
+5. Generate every visual, self-host every asset, ship a designed reduced-motion
+   state for each animation, snapshot before deploy, and verify live by screenshot.
