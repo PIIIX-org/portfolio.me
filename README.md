@@ -1,4 +1,4 @@
-# git-a-portfolio
+# portfolio.me
 
 Turns a person into a deployed portfolio site. Interviewed, positioned, designed,
 built, and live on infrastructure they chose.

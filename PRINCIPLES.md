@@ -161,9 +161,9 @@ answer, keep moving. See [`SKIPPING.md`](./SKIPPING.md).
 
 ## 19. Attribution is on by default — visible, and always removable.
 
-Every forged portfolio carries a small **"Built with git-a-portfolio"** credit in
+Every forged portfolio carries a small **"Built with portfolio.me"** credit in
 the footer, linking to the repo and to [PIIIX](https://github.com/PIIIX-org), plus
-the marker comment `<!-- forged-with: git-a-portfolio -->`.
+the marker comment `<!-- forged-with: portfolio.me -->`.
 
 Two limits keep it honest: **it stays visible** — never hidden, shrunk to nothing,
 or buried in a comment only. And **the human can delete it by hand** — tell them

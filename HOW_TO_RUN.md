@@ -5,17 +5,17 @@
 Install as a plugin, then:
 
 ```
-/git-a-portfolio <name or handle>
+/portfolio.me <name or handle>
 ```
 
-Or point at the skill directly: "read `skills/git-a-portfolio/SKILL.md` and run the
+Or point at the skill directly: "read `skills/portfolio.me/SKILL.md` and run the
 pipeline for <subject>."
 
 ## Any other capable agent
 
 Point it at this repo and say:
 
-> Read `PRINCIPLES.md`, then `skills/git-a-portfolio/SKILL.md`. Execute the loops in
+> Read `PRINCIPLES.md`, then `skills/portfolio.me/SKILL.md`. Execute the loops in
 > `loops/` in order for <subject>. Stop at every gate and wait for my decision.
 
 There is no program to install. The pipeline is markdown; the agent is the runtime.

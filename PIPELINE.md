@@ -1,6 +1,6 @@
 # The pipeline
 
-`git-a-portfolio` turns a person into a deployed portfolio site — researched,
+`portfolio.me` turns a person into a deployed portfolio site — researched,
 positioned, designed, built, and live on infrastructure they chose. It runs eight
 loops with human gates between them. It is an agent operating system: markdown
 instructions a capable coding agent executes, not a program you install.
@@ -61,7 +61,7 @@ Four stops. The human decides at each one.
 
 ## Skipping
 
-Everything except four rules is optional (`§18`, [`SKIPPING.md`](./SKIPPING.md)).
+Everything except five rules is optional (`§18`, [`SKIPPING.md`](./SKIPPING.md)).
 State the cost once, honor the answer, record it in `runs/<slug>/SKIPS.md`, and
 carry it into the confidence grade. Never skip a step on your own initiative.
 

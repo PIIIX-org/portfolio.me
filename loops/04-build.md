@@ -276,7 +276,7 @@ Screenshot at all three widths, both color modes, and in reduced-motion. Put the
 Add the footer credit and the marker comment (`§19`):
 
 ```html
-<!-- forged-with: git-a-portfolio -->
+<!-- forged-with: portfolio.me -->
 ```
 
 Tell the human it's there and that deleting it is fine.

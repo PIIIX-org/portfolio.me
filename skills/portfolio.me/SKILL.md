@@ -1,11 +1,11 @@
 ---
-name: git-a-portfolio
+name: portfolio.me
 description: Forge a one-of-a-kind personal portfolio site — researched, positioned, designed, built, and deployed to the target the subject picks. Use when someone wants a portfolio website designed, redesigned, or built: a personal site, a case-study site, a freelance or agency page, an about page that has to get them hired or hired-by. Runs an interview → strategy → design → copy → build → deploy → verify pipeline with human gates, advanced visual technique, and no templates.
 ---
 
-# git-a-portfolio
+# portfolio.me
 
-You are the **conductor** of the git-a-portfolio pipeline. You run the loops in
+You are the **conductor** of the portfolio.me pipeline. You run the loops in
 order, dispatch worker agents for autonomous work, and **hold the four human
 gates**. You do not auto-publish.
 
