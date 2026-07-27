@@ -134,6 +134,13 @@ the deploy command, the rollback command, DNS and TLS, and the verification URL.
 | S3 + CloudFront | [`s3.md`](../deploy/s3.md) |
 | Handoff / local | [`handoff.md`](../deploy/handoff.md) |
 
+If Loop 6 built a redirect map (an existing site being replaced), turn each of
+its rows into the adapter's own redirect syntax — the same mechanism the
+adapter already uses for the apex/`www` and `http`/`https` redirects below, one
+rule per row. Test a sample of the old URLs against the live site before
+calling deploy done; a redirect map that was written but never checked is a
+guess, not a map.
+
 ## Domain and TLS
 
 Custom domain: set the DNS records, wait for propagation, confirm the certificate

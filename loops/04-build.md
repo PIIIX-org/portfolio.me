@@ -171,6 +171,38 @@ text lays out, the image arrives, everything below jumps. Costs two attributes.
 
 Below the fold, the same block with `loading="lazy"` and no `fetchpriority`.
 
+## Language and script
+
+The decision was made in `ARCHITECTURE.md`. This is where it gets built.
+
+**Logical properties are the default, not the RTL patch.** Write
+`margin-inline-start`, `padding-inline-end`, `inset-inline-start` in the token
+file and every component from day one — LTR-only and RTL-and-LTR cost the same
+to build this way, and a site started with `margin-left` everywhere pays for
+the conversion later whether or not it ever ships a second language. The
+`tokens.css` from "The shell contract" above uses these; it is not an
+afterthought bolted onto the existing token set.
+
+**`dir` is set correctly, on `<html>` at minimum**, and per-element where a
+single page legitimately mixes scripts (a name quoted in its original script
+inside otherwise-LTR body copy). Never inferred from content at runtime when
+it is knowable at build time.
+
+**The font actually renders the script.** A Latin font silently falling back to
+a system font for Arabic or Hebrew text is worse than choosing deliberately —
+verify every weight used actually covers the script's full range before
+vendoring it, not after a missing-glyph box turns up in review.
+
+**A language switcher, if `ARCHITECTURE.md` called for one**, is shell-owned
+like nav — present on every page, keyboard-reachable, and it switches the
+whole page's `dir` and font stack along with the content, never text alone
+while the layout stays mirrored wrong.
+
+**Test the mirror.** An RTL page is not an LTR page with text flowing backward
+— icons that imply direction (an arrow, a chevron) mirror with it, and ones
+that do not (a logo, a play button) do not. Check both by eye; nothing in "The
+three states" above catches a chevron pointing the wrong way.
+
 ## Video, audio, and live demos
 
 A motion designer's portfolio is video first. So is a filmmaker's, a sound
@@ -228,6 +260,30 @@ curl -sL <cdn-url> -o vendor/<lib>.min.js
 Download it, commit it, reference it locally. Same for fonts — self-hosted, subset,
 `font-display: swap`, no Google Fonts link. A public endpoint going down should
 never take this site with it.
+
+### Confirm the font license before you self-host it
+
+A desktop or comp license and a webfont-embedding license are not the same
+grant, and a font "free for personal use" is a common trap on a site built to
+get someone hired or hired-by — that is commercial use of the license, whatever
+the individual's employment status. Confirm before vendoring, not after:
+
+| Source | Usually fine to self-host | Check anyway |
+|---|---|---|
+| Google Fonts, Fontsource | Yes — OFL or Apache, webfont embedding is the point | Confirm the specific family; a handful carry different terms |
+| A type foundry, purchased | Depends entirely on the tier bought | The license file. "Desktop" and "web" are frequently sold separately |
+| Something the subject already owns or licensed | Depends | Ask them directly, and get the license file, not just the font file |
+
+Write `LICENSES.md` in the site's repo: every font, its license, and whether
+web embedding is explicitly covered. Every vendored library too, while the
+file exists — same idea, lower stakes. This is not only the handoff adapter's
+job (`deploy/handoff.md`); it belongs to every run, because a font that goes
+live on a domain is a bigger exposure than one sitting in a build folder, not
+a smaller one.
+
+No license file findable, and the subject can't produce one: do not vendor it.
+Pick from the left column instead — the design survives a font substitution;
+the subject does not want to discover this the way it usually gets discovered.
 
 ## Analytics
 

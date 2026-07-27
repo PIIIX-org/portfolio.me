@@ -7,8 +7,9 @@ answer engines, without bending the voice `§11` exists to protect.
 (positioning and audience), `EVIDENCE.md`, `COPY.md`.
 
 **Output:** `sitemap.xml`, `robots.txt`, `llms.txt`, canonical tags confirmed,
-expanded structured data, a heading and meta audit, and — once Loop 7 has put
-the site live — search engine submission.
+expanded structured data, a heading and meta audit, a redirect map when an
+existing site is being replaced, and — once Loop 7 has put the site live —
+search engine submission.
 
 A portfolio nobody can find failed at being found, not at being built. This loop
 is the difference.
@@ -69,6 +70,36 @@ during build has no business in the sitemap.
 Drafts, redirected slugs, and anything `noindex` are excluded. `lastmod` is the
 real commit date of that page, not today stamped on everything.
 
+## Replacing an existing site
+
+Only when Loop 1 recorded one. Every URL the old site answered is a citation
+this run can break — indexed in search, bookmarked, linked from a place the
+subject does not control and cannot fix after the fact.
+
+Build the map before deploy: old path → new path, one row per URL from the
+list gathered at intake. Most map onto an obvious equivalent in the new
+`ARCHITECTURE.md` routing; where one genuinely has no successor, point it at
+the closest real page rather than the home page by reflex — a 301 to
+somewhere irrelevant reads as broken even though it technically resolves.
+
+```
+/portfolio/project-1.html   →  /work/project-1
+/blog/2023/some-post         →  /writing/some-post
+/old-about-me.html           →  /about
+```
+
+**This is data, not a new mechanism.** Every deploy adapter already documents
+how it writes a redirect rule — `_redirects` and `netlify.toml` on Netlify,
+`vercel.json` on Vercel, `RewriteRule` in `.htaccess`, an nginx `location`
+block. Loop 7 turns this map into that adapter's own syntax, the same way it
+already handles the apex/`www` and `http`/`https` redirects those files
+describe. One row here becomes one rule there — this is the source list, not
+a second redirect system to maintain.
+
+Every redirect is a real 301, not a client-side JavaScript bounce or a meta
+refresh — those lose the search equity a 301 preserves, which is the entire
+point of doing this.
+
 ## `llms.txt`
 
 The same job as `robots.txt`, aimed at AI answer engines instead of search
@@ -103,6 +134,28 @@ Every page carries `rel="canonical"` pointing at its own absolute URL — alread
 required by `loops/05-share.md` for the unfurl. Confirm it here from the search
 side: a case study whose canonical points at the homepage tells search engines
 the case study does not really exist.
+
+## Multi-language
+
+Only when `ARCHITECTURE.md` recorded more than one language. Every translated
+page carries `hreflang` back to every one of its counterparts, including
+itself, plus an `x-default` pointing at whichever language the subject named
+primary:
+
+```html
+<link rel="alternate" hreflang="en" href="https://example.com/en/work/project" />
+<link rel="alternate" hreflang="fa" href="https://example.com/fa/work/project" />
+<link rel="alternate" hreflang="x-default" href="https://example.com/en/work/project" />
+```
+
+Missing or mismatched `hreflang` is how a search engine shows someone the wrong
+language, or worse, marks the two as duplicate content and drops one. One
+`sitemap.xml`, both languages, each `<url>` carrying its own `hreflang`
+alternates — not two separate sitemaps, which is easy to let drift out of sync.
+
+A "primary plus lighter secondary" language (`ARCHITECTURE.md`) only gets
+`hreflang` on the pages that genuinely exist in both — never point it at a page
+the secondary language does not actually have.
 
 ## Titles and descriptions
 
@@ -209,4 +262,5 @@ Record what was submitted, and under which account, in `runs/<slug>/REPORT.md`.
 | Titles and descriptions | Generic or duplicate results in search, which reads as unmaintained |
 | Structured data | No rich result, no breadcrumb in search, a weaker basis for an AI answer engine to cite the site correctly |
 | Content and keyword audit | The site reads fine to a human who already has the link and stays invisible to one who does not have it yet |
+| Redirect map (when replacing a site) | Every old URL 404s the day the new site goes live — indexed pages, bookmarks, and every link the subject does not control all break at once, and the search ranking built under the old URLs starts over from nothing |
 | Submission | The site is indexed eventually anyway, just slower — this step only speeds up discovery, it does not gate it |

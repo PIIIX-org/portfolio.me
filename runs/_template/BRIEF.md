@@ -42,6 +42,12 @@ Who lands here, and what they are deciding.
 Single page / multi-page / multi-page with a blog. Whether they will actually write.
 Settled at Gate A, not revisited (`ARCHITECTURE.md`).
 
+### Language
+
+One language, or more than one with a switcher — and if more than one, full
+parity or primary-plus-lighter-secondary. Replacing an existing site: yes/no,
+and its URL list is in `EVIDENCE.md` for Loop 6's redirect map.
+
 ### Confidential
 
 What cannot be named: clients, numbers, screenshots (`§21`). What is cleared, and by

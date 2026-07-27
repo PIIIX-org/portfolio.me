@@ -84,10 +84,9 @@ it without asking a question.
    and it will not be re-added.
 7. **What is not included.** No analytics, no form backend, no domain.
 
-`LICENSES.md` lists every font with its licence and whether web embedding is
-covered, every image with its origin, and every vendored library with its
-licence file. A commercial font licensed for comps and shipped as a `woff2` is
-a legal problem handed to someone who does not know they are holding it.
+`LICENSES.md` ships in the archive — it was already written in Loop 4
+(`loops/04-build.md`), because the font-licensing check runs on every build, not
+only handoff mode. Include it in the archive rather than re-deriving it here.
 
 Ship the archive with its checksum:
 

@@ -73,6 +73,10 @@ hand-authored HTML: the subject has to publish without you, and hand-editing HTM
 is exactly the friction that stops people writing. Ask whether they will actually
 write, and take the honest answer.
 
+Same gate, same file: how many languages, and whether an existing site is being
+replaced — the second needs its URLs for Loop 6's redirect map before you get any
+further than intake.
+
 The run ends when they can publish on their own. Loop 7 writes a tested
 `CONTRIBUTING.md` in their repo.
 
@@ -132,7 +136,7 @@ first-class option, not a fallback.
 
 Offer it when the human signals time pressure, do not default to it: short
 interview, scrape, one concept, direct build, copy, share, deploy, verify. Keeps
-all four hard rules and Gate C. Grade ceiling **B**.
+all five hard rules and Gate C. Grade ceiling **B**.
 
 ## The report is the deliverable
 

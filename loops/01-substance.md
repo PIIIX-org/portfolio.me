@@ -115,6 +115,9 @@ a fallback.
 > Where does it deploy? (Walk the deploy square from `PIPELINE.md`.)
 >
 > One page, or several? And do you write, or intend to?
+>
+> Is there an existing site this replaces? If so, get its URLs — every one you
+> can find, not just the ones that still matter to you.
 
 That last question decides the stack, so it cannot wait for the build. A blog means
 the human publishes without you, which hand-authored HTML cannot support. Walk
@@ -122,6 +125,11 @@ the human publishes without you, which hand-authored HTML cannot support. Walk
 
 Ask whether they will actually write, and take the honest answer. A blog nobody
 writes is dated evidence that they stopped.
+
+Replacing a site is common and easy to under-ask: the subject remembers the
+projects page and the about page and forgets the fourteen blog posts Google
+still has indexed. Pull the old sitemap if one exists, or crawl the live site's
+nav, rather than trusting memory alone — the list feeds Loop 6's redirect map.
 
 Invite references throughout: sites, images, a moodboard, a song, a building. Feel
 is an input.

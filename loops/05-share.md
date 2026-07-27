@@ -5,7 +5,8 @@ way to act when they decide to.
 
 **Input:** the built site, `BRIEF.md`, `DIRECTION.md`.
 
-**Output:** OG image, meta, structured data, favicons, and a working contact path.
+**Output:** OG image, meta, structured data, favicons, a working contact path, and
+— optionally — `cv.pdf`.
 
 ---
 
@@ -73,6 +74,35 @@ profiles, `knowsAbout`. Every field sourced from `EVIDENCE.md` (`§5`).
 SVG favicon, 180px apple-touch-icon, `manifest.json` with theme color. Derived from
 the site's visual language, not a letter in a circle by reflex.
 
+## The CV
+
+Optional — ask. Not every subject wants a downloadable résumé; an agency site
+or an inbound-only freelancer often doesn't. When they do, it's a second render
+of material this pipeline already has, not new material: `EVIDENCE.md`'s proof
+ladder and `BRIEF.md`'s positioning and project list, condensed from the case
+studies Loop 3 already wrote rather than re-derived from scratch. Same rule as
+everywhere else — every line traces to a source, `§5` still applies.
+
+**Ask which it's for**, because the honest answer changes the design:
+
+- **Styled to match the site** — carries the visual identity, reads as one
+  thing with the portfolio. Right for a design-forward audience who will open
+  it as a PDF and look at it.
+- **Plain and parser-safe** — standard structure, no columns, no icons-as-text,
+  nothing an ATS mangles. Right when the CV's first reader is software, and a
+  human sees it only after it survives that pass.
+
+When unsure which the audience needs, default to plain — a CV that never
+reaches the human because a parser choked on it cost more than losing some
+personality would have.
+
+Author `cv.md`, render to PDF (`make-pdf` if available, or any HTML-to-PDF
+capability the platform has), and publish it at a stable, predictable URL —
+`/cv.pdf` at the root, not buried in a path that changes across runs — so the
+résumé link below has something durable to point at. On a re-run that updates
+a claim (`loops/09-rerun.md`), regenerate it in the same pass; a CV that quietly
+drifts out of sync with the site is its own kind of rot.
+
 ## The conversion path
 
 **Coupled to the deploy target.** A static host cannot take a form POST without a
@@ -89,9 +119,9 @@ third party; a VPS can. Pick from what the target actually supports:
 Whatever it is, it gets tested end to end before Gate C. An untested contact form is
 worse than a `mailto:` — it fails silently and nobody knows.
 
-**The ask matches the audience.** A hiring manager gets a résumé link and an email.
-A client gets a scoped inquiry. An investor gets a calendar link. One clear action,
-derived from the decision named in `BRIEF.md`.
+**The ask matches the audience.** A hiring manager gets `/cv.pdf` and an email, if
+the CV above was built. A client gets a scoped inquiry. An investor gets a
+calendar link. One clear action, derived from the decision named in `BRIEF.md`.
 
 ## Legal minimum
 

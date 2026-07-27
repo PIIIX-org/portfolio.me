@@ -43,7 +43,7 @@ inferred rather than read. A reconstruction is not a brief.
 | Request | What it touches | Re-enters at |
 |---|---|---|
 | Add a project or a blog post | Copy, build, share, SEO, deploy, verify | Loop 3 |
-| Update a claim or a number | Evidence, then copy. Re-check `§5` | Loop 1 evidence, then Loop 3 |
+| Update a claim or a number | Evidence, then copy. Re-check `§5`. Regenerate `cv.pdf` too if one exists — it drifts out of sync silently otherwise | Loop 1 evidence, then Loop 3 |
 | Fix something broken | Build, then verify | Loop 4 |
 | Sitemap, robots.txt, or an indexing change | SEO only | Loop 6 |
 | Restyle or refresh | Direction and everything downstream | Loop 2, existing `BRIEF.md` |

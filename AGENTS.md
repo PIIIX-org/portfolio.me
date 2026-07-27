@@ -42,7 +42,7 @@ Updating a site this pipeline already built? Enter at
 | File | Governs |
 |---|---|
 | [`BRAND.md`](./BRAND.md) | Archetype, positioning, voice, the translation table |
-| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How many pages, routing, and the blog |
+| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How many pages, routing, the blog, and language |
 | [`STYLES.md`](./STYLES.md) | What it looks like: 48 styles and how to collide them |
 | [`CRAFT.md`](./CRAFT.md) | How it renders: the technique arsenal |
 | [`MODELS.md`](./MODELS.md) | Which model tier runs which step |

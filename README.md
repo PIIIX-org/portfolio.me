@@ -121,7 +121,7 @@ rollback, DNS and TLS, forms — so reading one teaches all nine.
 |---|---|
 | [`PRINCIPLES.md`](./PRINCIPLES.md) | 25 binding rules, 5 of them hard |
 | [`BRAND.md`](./BRAND.md) | Archetype, positioning, voice, the translation table |
-| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How many pages, routing, and the blog |
+| [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How many pages, routing, the blog, and language |
 | [`STYLES.md`](./STYLES.md) | What it looks like, and how to collide two |
 | [`CRAFT.md`](./CRAFT.md) | How it renders |
 | [`MODELS.md`](./MODELS.md) | Which model tier runs which step |

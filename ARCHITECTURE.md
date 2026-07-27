@@ -22,6 +22,43 @@ Ask at intake. Three shapes, and the answer follows from what they actually have
 Default to single page for a thin portfolio, multi-page the moment a case study is
 long enough that someone would want to send just that link.
 
+## Language
+
+The same kind of decision, asked in the same breath at Gate A: what language, and
+whether there is more than one.
+
+**One language, whatever it is.** The common case, including a site entirely in
+Persian, Arabic, Japanese, anything — this is not "i18n," it is just the site's
+one language. `§17` already covers it: `dir="rtl"` and logical properties where
+the script needs them, a font that actually renders it, never a transliterated
+or mangled name.
+
+**More than one, with a switcher.** A real decision with a real cost, not a
+box to check. Ask which it actually is:
+
+- **Full parity** — every page, every case study, in both languages, kept in
+  sync on every re-run. The honest, expensive answer.
+- **Primary plus a lighter secondary** — one language carries the full site, the
+  other carries the essentials (about, contact, a language note on the home
+  page). Cheaper, and often more honest than a full translation nobody keeps
+  current — a stale secondary language reads worse than an absent one.
+
+Say which was chosen in `BRIEF.md`. A secondary language quietly allowed to rot
+is the same failure `loops/09-rerun.md`'s rot check watches for elsewhere.
+
+**Strategy is derived once; voice is not.** `BRAND.md`'s archetype and
+positioning are conceptual, not linguistic — they do not change per language.
+The verbal identity does: lexicon, rhythm, and the subject's own sentences from
+`§11` do not survive mechanical translation. Multi-language copy in Loop 3 gets
+written in each language from what the subject actually said in it, not
+translated from one into the other. If they were only interviewed in one
+language, say so in `BRIEF.md`, and treat the other language's copy as a
+known-thinner pass rather than pretending it carries the same voice.
+
+The build mechanics — logical CSS properties, per-language fonts, the switcher
+itself — belong to `loops/04-build.md`. The search-facing side — `hreflang`,
+per-language sitemaps or meta — belongs to `loops/06-seo.md`.
+
 ## Why a case study wants its own URL
 
 A hiring manager sends one link to a colleague. If everything lives on one page, they
@@ -84,6 +121,13 @@ Flat and readable. The URL is part of the design.
 Rules: no `/index.html` in a public URL, trailing slashes consistent, slugs
 lowercase and hyphenated, and slugs never change once published — a dead URL that
 someone bookmarked is a broken citation. If a slug must change, redirect it.
+
+**Replacing an existing site is the same rule at a larger scale.** Every URL
+the old site answered — indexed, bookmarked, linked from somewhere the subject
+does not control — is a citation this run can break. Ask about this at intake
+(`loops/01-substance.md`) and build the actual redirect map in
+[`loops/06-seo.md`](./loops/06-seo.md), where it belongs beside the sitemap
+and canonical work it protects.
 
 ## Nav
 

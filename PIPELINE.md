@@ -42,7 +42,7 @@ result looks like *them*, works on a phone, and doesn't rot.
 
 The binding rules are in [`PRINCIPLES.md`](./PRINCIPLES.md). Read them first. The
 supporting doctrine: [`BRAND.md`](./BRAND.md) (strategy),
-[`ARCHITECTURE.md`](./ARCHITECTURE.md) (how many pages, and the blog),
+[`ARCHITECTURE.md`](./ARCHITECTURE.md) (how many pages, the blog, and language),
 [`STYLES.md`](./STYLES.md) (what it looks like), [`CRAFT.md`](./CRAFT.md) (how you
 render it), [`MODELS.md`](./MODELS.md) (which tier runs which step),
 [`SKIPPING.md`](./SKIPPING.md) (what it costs to leave a step out),

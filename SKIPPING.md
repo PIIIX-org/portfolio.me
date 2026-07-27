@@ -49,13 +49,14 @@ Each loop file repeats its own row. This is the whole map.
 | **5 Conversion path** | The reason the site exists. Someone decides to reach out and finds no way to. |
 | **6 SEO — technical layer** | `sitemap.xml`, `robots.txt`, canonical tags, structured data. The site still works for anyone with the link; search engines find it slower and less completely, if at all ([`loops/06-seo.md`](./loops/06-seo.md)). |
 | **6 SEO — submission** | Only speeds up discovery, it does not gate it. Skippable without much cost once the technical layer shipped. |
+| **6 Redirect map** | Only applies when replacing an existing site. Every old URL 404s the moment the new one goes live — indexed pages, bookmarks, and every link the subject does not control break at once, and search ranking built under the old URLs starts over ([`loops/06-seo.md`](./loops/06-seo.md)). |
 | **7 Credibility audit** | The human's own Gate C review becomes the only check for voice drift, claim inflation, and whether the concept still holds up now that it's built. Nothing prevents this from shipping; it just costs the human more of their own attention at the gate to catch it themselves. |
 | **7 Deploy** | Nothing goes live. Output is a build folder plus run instructions. A legitimate end state — handoff mode. |
 | **7 Post-launch monitor** | Nothing watches the site between now and whenever someone thinks to check on it by hand. Purely opt-in — declining costs nothing beyond finding rot later than a weekly check would have. |
 | **8 Verify** | Confirmation it renders on real devices. `§14` says look at it; skipping means the first person to see it live is a stranger. |
 | **Model tiering** | Matching the model to the work ([`MODELS.md`](./MODELS.md)). On a top-tier session you lose only budget. On a low-tier one the mechanical loops are fine and the judgment loops show it: flatter interview questions, concepts closer to the category reflex, a voice pass that reads like a model writing in someone's voice. The quiet skip — none of it fails a Loop 8 check. The site passes and it is a worse site. Note the session tier here so the grade means something. |
-| **CV export** | A résumé that stays in sync with the site. |
-| **i18n / RTL** | Only skippable when there is one language and it's LTR. Otherwise `§17` applies and it isn't optional. |
+| **CV export** | No downloadable résumé — the hiring-manager ask in `loops/05-share.md`'s conversion path has nothing to point at but an email. Purely opt-in; plenty of sites are right to skip it. |
+| **Multi-language** | One language only. Not a skip so much as a default — `§17` still applies in full to whichever single language it is; what's skippable is adding a second one, not respecting the first ([`ARCHITECTURE.md`](./ARCHITECTURE.md)). |
 | **Legal (imprint/privacy)** | Only skippable when nothing is collected. If there's a form, EU users make it a legal requirement, not a preference. |
 
 ## Express mode
@@ -66,7 +67,7 @@ The pre-packaged skip set, for "I need something up by Friday":
   direct build, copy, share layer, deploy, verify.
 - Skips: documents, peer analysis, full brand strategy, design images, prototypes,
   Gates B1/B2.
-- Keeps: all four hard rules, and Gate C.
+- Keeps: all five hard rules, and Gate C.
 - Grade ceiling: **B**.
 
 Offer it when the human signals time pressure. Don't default to it.
