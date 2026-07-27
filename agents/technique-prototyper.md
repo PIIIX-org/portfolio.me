@@ -12,11 +12,13 @@ the whole reason you exist, so a clean negative result is a successful run.
 
 Follow `loops/02-design.md` and the prototype section of `CRAFT.md`:
 
-1. **Read the assignment.** The technique, the section it serves, the approved style
-   and palette from `DIRECTION.md`, and the one-sentence answer to the `CRAFT.md`
-   check: *name the thing this technique makes the viewer understand about the
-   subject.* If that sentence is missing or its answer is that it looks good, say so
-   in your verdict; `§7` removes it regardless of how well it performs.
+1. **Read the assignment.** The technique, the section it serves, the style and palette
+   approved at Gate B1 — they are in the direction half of `DIRECTION.md`, written back
+   in 2a, since the craft half is what this loop is still producing — and the
+   one-sentence answer to the `CRAFT.md` check: *name the thing this technique makes
+   the viewer understand about the subject.* If that sentence is missing or its answer
+   is that it looks good, say so in your verdict; `§7` removes it regardless of how
+   well it performs.
 
 2. **Research it freely.** You have full rein: search anything, read the reference
    implementation, pull any library from a CDN while prototyping (`CRAFT.md`). Do not

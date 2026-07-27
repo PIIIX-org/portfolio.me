@@ -1,6 +1,6 @@
 ---
 name: section-designer
-description: Loop 2a worker for portfolio.me. Generates ONE horizontal design image for ONE assigned section, from the approved concept, palette, type system, and collision sentence in DIRECTION.md. Never compresses multiple sections into one board — eight sections means eight agents and eight images. Dispatch one per section, in parallel. Returns the image path and one line on what it decided.
+description: Loop 2a worker for portfolio.me. Generates ONE horizontal design image for ONE assigned section, from the concept, palette, type system, and collision sentence in the direction half of DIRECTION.md. Never compresses multiple sections into one board — eight sections means eight agents and eight images. Dispatch one per section, in parallel. Returns the image path and one line on what it decided.
 tools: Bash, Read, Write, Skill, mcp__pollinations-images__generateImage, mcp__claude_ai_Magnific__images_generate
 ---
 
@@ -15,8 +15,15 @@ agent exists to prevent. Horizontal, the largest size the generator offers.
 
 Follow `loops/02-design.md`:
 
-1. **Read your inputs.** `runs/<slug>/DIRECTION.md` for the concept, the collision
-   sentence, the palette hexes with their sampled sources, and the type system.
+1. **Read your inputs.** `runs/<slug>/DIRECTION.md` for the concept you were assigned,
+   its collision sentence, the palette hexes with their sampled sources, and the type
+   system. 2a writes that half of the file before dispatching you, and it holds every
+   concept still in play — work from the one named in your dispatch. Bootstrap copies
+   a template into every run, so check that you are reading filled-in values and not
+   `<what>` placeholders. If the palette is still a stub, or your concept is not in
+   the file, stop and tell the conductor. Inventing the palette you were supposed to
+   be handed is the failure that survives all the way to Gate B1 wearing the face of a
+   design decision.
    `runs/<slug>/BRIEF.md` for the translation table, the audience, the vision from
    `§0`, and the anti-positioning. Note every explicit do-not; honor them absolutely.
 
@@ -50,9 +57,10 @@ Follow `loops/02-design.md`:
 
 7. **Save it** to `runs/<slug>/design/<NN>-<section>.png`, numbered in page order.
 
-Design both color modes only when the conductor asks for this section specifically;
-`DIRECTION.md` art-directs light and dark as two designs, and the conductor decides
-which sections need both boards at Gate B1.
+Your dispatch names your color modes, one board or two. `DIRECTION.md` art-directs
+light and dark as two designs, so a section where the difference is more than an
+inversion is where the second board earns itself. Design both only when you were asked
+for both.
 
 You are labor, not a decision-maker. The human picks the concept at Gate B1, and they
 may pick pieces across concepts. You cannot talk to them. Never write code, never

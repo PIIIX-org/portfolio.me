@@ -8,11 +8,24 @@ single line of the real site is written.
 **Output:** `DIRECTION.md`, one design image per section, one runnable prototype per
 technique.
 
+`DIRECTION.md` is written in two passes. 2a writes the direction half before any
+worker is dispatched, because both workers in this loop open that file as their brief.
+2b appends the craft half.
+
+Bootstrap already copied the template into the run, so the file is sitting there from
+Loop 0 with `<what>` where the accent hex belongs. A worker dispatched before 2a
+fills it in does not error. It reads the placeholders, invents a palette to replace
+them, and returns a board that looks finished — and the invention only surfaces at
+Gate B1, by which time the whole set has been rendered against it.
+
 ```text
 2a DIRECTION ──────► Gate B1 ──────► 2b CRAFT ──────► Gate B2
    palette, type,     concept          technique per     motion +
    2-3 concepts,      picked           section, motion   budget
    image per section                   spec, prototypes  locked
+
+   └ DIRECTION.md                      └ DIRECTION.md
+     direction half                      craft half appended
 ```
 
 ---
@@ -62,6 +75,17 @@ Run the category-reflex check on each: if it's guessable from "portfolio for a
 [category]" alone, or from category-plus-obvious-twist, throw it out. Note one you
 rejected and why, so the human sees the range.
 
+### Write the direction half of `DIRECTION.md`
+
+Before a single worker is dispatched. This is the brief every worker in the loop reads,
+and it is the reason 2a produces a file at all rather than holding the direction in the
+conductor's head.
+
+It carries what 2a decided: the palette with its sampled sources, the type system, all
+2–3 concepts with their collision sentences, and the section list under each. Concepts
+stay plural here. Gate B1 picks the winner, and the record of which one won and why it
+beat the others is written when the craft half is appended in 2b.
+
 ### Design images
 
 Dispatch `section-designer`, **one agent per section**. Each returns one horizontal
@@ -69,6 +93,28 @@ image of that section.
 
 Never compress multiple sections into one board. Eight sections means eight images.
 A compressed board hides exactly the detail the human needs to judge.
+
+Two things ride along in the dispatch. Only the conductor can supply either one,
+because a worker sees its own section and nothing on either side of it:
+
+- **The composition brief** — what the neighboring sections are doing, so this one
+  varies from them. Left-text-right-image is every worker's safest independent guess,
+  so eight workers left to themselves return eight boards of it. Varying the set is
+  the conductor's job. The worker cannot see far enough to do it.
+- **The color modes for this section** — one board or two. Light and dark are
+  art-directed as two designs, so a section where the difference is more than an
+  inversion needs both boards, and the rest need one.
+
+**State the fan-out before dispatching.** Concepts multiply sections: three concepts
+across eight sections is twenty-four agents and twenty-four images. A conductor that
+has not done that multiplication ends up doing it by accident. Say the number out loud
+before dispatching.
+
+The cheap default is the same bounded set for every concept — the opening move and one
+project section — with the full section run rendered for whichever concept wins B1.
+Bounding it evenly is the part that matters. Render one concept further than its rivals
+and the gate stops comparing concepts and starts comparing finish. Render everything
+for everyone when the human asks for it and knows the count.
 
 > ## Gate B1 — human decision
 >
@@ -130,12 +176,16 @@ Declare it now, per `§13`:
 
 A technique that cannot be deferred has to justify its bytes at this gate.
 
-### Write `DIRECTION.md`
+### Complete `DIRECTION.md`
 
-Concept and why it won. The collision, and which parent is structural. Palette with
-hexes and sampled sources. Type system. Section-by-section technique assignment.
-Motion spec. Both budget tiers. **What was invented** — the thing that exists in
-this run and no other (`§3`). Prototype results including the failures.
+The direction half has been on disk since 2a: palette with hexes and sampled sources,
+type system, concepts, section list. Cut the concepts down to the one that won and say
+why it beat the others, keep the collision and which parent is structural, then append
+the craft half — section-by-section technique assignment, motion spec, both budget
+tiers, **what was invented** (the thing that exists in this run and no other, `§3`),
+and the prototype results including the failures.
+
+The file is now the whole of Loop 2. Loops 3, 4, 5, and 9 open it as settled.
 
 > ## Gate B2 — human decision
 >
@@ -158,8 +208,8 @@ place is a valid outcome — the section ships in tier 1 and the budget improves
 Both gates. Record what the rejection **revealed** in `DIRECTION.md`, alongside the
 new direction: what they reacted against, and what that says about the vision,
 audience, or archetype that `BRIEF.md` failed to capture. Recording only the
-correction throws away the more valuable half of it. A B1 rejection carries forward
-into `DIRECTION.md` when it gets written at the end of 2b.
+correction throws away the more valuable half of it. A B1 rejection goes into the
+direction half as soon as it happens, where the 2b workers will read it.
 
 **Three rejections at the same gate means the brief is wrong, not the execution.**
 Stop iterating. Re-open Loop 1d, fix the synthesis, and come back through Gate A.
