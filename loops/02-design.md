@@ -54,7 +54,11 @@ Generate **2–3 distinct concepts** (`§4`). Each states:
 - The **collision or subversion** — this run's `§3` answer, written as one sentence.
   Which parent carries structure, which carries surface.
 - The **opening move** — what happens in the first three seconds
-- How **projects are presented** — invent it. Not a card grid by reflex.
+- How **projects are presented** — invent it. Not a card grid by reflex: a flexible
+  card layout places each project's attributes in a different spot from the next,
+  so a reader comparing them scans back and forth hunting for what moved. A vertical
+  list, a table, or a filmstrip holds a predictable position from item to item and
+  is the more honest default whenever the projects genuinely are comparable.
 - How **navigation** works
 - The **section list** and order, derived from the audience's decision
 
