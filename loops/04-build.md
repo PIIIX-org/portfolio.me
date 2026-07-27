@@ -236,6 +236,21 @@ nothing and reads as broken.
 Most of the time the static screenshot plus a link is the better call. It always
 renders, it costs a fraction of the bytes, and it survives the demo going away.
 
+## Modals, drawers, and sheets
+
+Any overlay carrying a project detail, a filter panel, or a lightbox is a modal
+pattern, and `§12` applies to the contract as much as the render.
+
+`aria-modal="true"` is legitimate only when both hold: the code prevents interacting
+with anything outside the overlay, and the styling visibly obscures it. Setting the
+attribute without both is worse than not setting it — it tells assistive tech the
+background is unreachable while a mouse user can still click through it, which is a
+harder failure than an unmarked overlay.
+
+On close, focus returns to the element that opened it. Not the page top, not
+wherever the layout happens to land. If that element no longer exists, focus goes
+somewhere that keeps the workflow legible, never dropped to `<body>`.
+
 ## The three states, per section
 
 Non-negotiable (`§12`). Each section ships:
@@ -315,7 +330,7 @@ Run these before the loop closes:
 |---|---|
 | **Responsive** | 360, 768, 1440. Real device shapes, not arbitrary breakpoints. Nothing overflows, nothing collapses, type stays readable |
 | **Semantic** | One `h1`, headings in order, landmarks, lists that are lists, buttons that are buttons |
-| **Keyboard** | Tab through everything. Visible focus. No traps. Skip link works |
+| **Keyboard** | Tab through everything. Visible focus. No traps. Skip link works. Any overlay meets the modal contract above, focus included |
 | **Budget** | Shell under 100KB and painting alone. Heavy layer deferred and gated. LCP under 1.5s |
 | **Cross-browser** | Chromium and WebKit at minimum. Safari breaks `backdrop-filter` and WebGL in ways Chrome does not |
 | **Copy** | Every string from `COPY.md`. No placeholder survived. Alt text on every image |

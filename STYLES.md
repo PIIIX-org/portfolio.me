@@ -356,6 +356,7 @@ does not ship.
 | **ASCII / text-only** | Screen readers read the art as character soup | `aria-hidden` on the art, `role="img"` with a written alt on the block, and real semantic HTML carrying the content underneath. |
 | **Glow-neon / vaporwave** | Saturated emission on dark causes halation and fringing | Glow applies to non-text elements only. Text uses a desaturated stop of the same hue at full contrast. Chromatic aberration never touches a glyph. |
 | **Data-brutalist** | Density defeats zoom and reflow | Real table semantics with scoped headers, horizontal scroll containers that are keyboard reachable, and a stated minimum readable width. |
+| **Neo-brutalism** | Bold color and thick borders read as loud rather than legible the moment hierarchy is left to the palette alone | Hierarchy carried by size and color-intensity variation, not border weight. Every bold-on-bold pairing checked at ≥4.5:1 on the actual colors in use, not the swatch in isolation. |
 
 ## Light and dark as two designs
 

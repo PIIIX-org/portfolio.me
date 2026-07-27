@@ -98,11 +98,22 @@ technique that ships in the shell costs nothing against the heavy budget.
 | `animation-timeline` | Native scroll-driven animation | Scroll effects off the main thread with no library. Check support, then fall back to `ScrollTrigger` |
 | Container queries | Components responding to their own box | Real art direction per component rather than per viewport. The correct tool for a project card that lives in three contexts |
 | CSS anchor positioning | Elements tethered to other elements | Annotations, tooltips, and marginalia that hold their relationship without JS measurement |
-| OKLCH gradients | Perceptual color space interpolation | Gradients with no gray dead zone in the middle. Use it everywhere and the palette gets better for free |
+| OKLCH gradients | Perceptual color space interpolation | Gradients with no gray dead zone in the middle. Free by default in CSS Color 4, which interpolates in Oklab unless an endpoint uses legacy sRGB syntax — `hex`, `rgb()`, `hsl()`. Write at least one endpoint as `oklch()` or `color(srgb …)` or the browser silently falls back to muddy sRGB mixing |
 | Morphing SVG paths | Interpolation between path definitions | Logos that transform, section markers that become something else |
 | Houdini paint worklets | Custom paint in a background image | Procedural texture inside CSS layout. Support is narrow, so always with a static fallback |
 | Conic / repeating gradients | Gradient functions used as pattern | Texture and moire at zero cost. Halftones, guilloche, radial rhythm |
 | `text-wrap: balance` / `pretty` | Native line-break optimization | Headlines that break where a designer would break them. One declaration |
+
+### Information design
+
+Zero dependencies, same as the group above. This is not chart styling — it is which
+channel carries the value, decided before a single pixel renders.
+
+| Technique | What it is | Where it earns its place |
+|---|---|---|
+| Position-first encoding | The value sits on a shared scale as a position, not as a length, angle, area, or color alone | Position judgments run 1.4–2.5× more accurate than length and 1.96× more accurate than angle, with 5.3–7.3× fewer catastrophic misreads (Cleveland & McGill). Any stat block, comparison table, or before/after figure |
+| Perceptually-uniform color scales | Sequential scales built lightness-dominant, dark reading as more. Diverging scales mark their break with both hue and lightness together. Qualitative scales hold saturation and lightness near-constant and vary hue alone | ColorBrewer's construction grammar. A scale built this way survives greyscale and holds together for colorblind readers by construction. Caps near 7–9 classes before further division reads as noise |
+| No rainbow, ever | Jet and rainbow-family colormaps stay off the table regardless of the palette elsewhere on the page | A bright mid-range band reads as a false peak — measured brighter than the true data maximum by a wide margin. The distortion hits every reader, not only colorblind ones |
 
 ### Motion and input
 
@@ -112,7 +123,7 @@ is bound by `§12`: a designed reduced-motion state ships with it.
 | Technique | What it is | Where it earns its place |
 |---|---|---|
 | Scrubbed scroll timelines | Progress tied to scroll position | Scroll as a scrub head. The visitor controls the story instead of watching it |
-| View Transitions API | Native cross-document and same-document morphs | Continuity between pages. A project thumbnail that becomes the case study hero |
+| View Transitions API | Native cross-document and same-document morphs. Cross-document needs `@view-transition { navigation: auto; }` on both pages, same-origin only, and browsers without support just ignore the unknown at-rule — safe with zero fallback code | Continuity between pages. A project thumbnail that becomes the case study hero, because the browser keeps the new state live rather than snapshotting it, so anything still running (a playing video) keeps running through the transition |
 | Custom cursors | The pointer replaced or augmented | Signals a designed environment within one second. Costs almost nothing |
 | Magnetic elements | Targets attracted to the pointer within a radius | Interactive surfaces that feel weighted. Best on a few elements only |
 | Spring and inertia physics | Motion resolved by simulation rather than easing | Motion that responds to how the input arrived. Nothing else feels this alive |
@@ -198,6 +209,18 @@ That asymmetry is the reason this loop exists.
 
 A gradient hero, an SVG filter, a clip-path reveal, and a `@property` animation
 all sit in tier 1 and cost close to nothing.
+
+### Motion that doesn't cost layout shift
+
+LCP is not the only budget in this section — CLS is a Core Web Vital too, and it is
+failed by the animation choices this file spends the most time recommending.
+
+Compositor-thread properties — `transform` (translate, scale, rotate, skew) and
+`opacity` — never trigger a layout shift, by definition. Animating `top`, `left`,
+`width`, `height`, or `box-shadow` does, every time, on every frame. The fix is
+never "animate it more carefully"; it is animating a different property. A hover
+lift moves on `transform: translateY()`, never on `top`. A glow grows on a
+pseudo-element's `opacity`, never on `box-shadow` spread.
 
 ### Deferring a WebGL scene
 
