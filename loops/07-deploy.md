@@ -1,4 +1,4 @@
-# Loop 6 — Deploy
+# Loop 7 — Deploy
 
 **Goal:** put it live on the infrastructure they chose, reversibly.
 
@@ -16,15 +16,54 @@ Deploy holds credentials and it is the irreversible step. It is not agent work.
 
 Nothing becomes publicly visible under someone's name before they have seen it.
 
+Loop 8 exists because a static screenshot and the live render are not the same
+claim (`§14`) — but Gate C happens before deploy, so it cannot review the live
+site yet. What it reviews instead should be as close to real as it can get.
+
+### Build the preview
+
+**On Claude Code — publish it as an Artifact, not a screenshot.** This works
+better than it sounds, because `§9` and `§10` already did the hard part: a
+correctly built site has no CDN, no hotlinked image, no external request of
+any kind — which is exactly what an Artifact requires. Flatten the built page
+into one self-contained file (inline the stylesheet, inline each vendored
+library's actual content as a `<script>` tag, embed images the page needs for
+this review) and publish it. The human gets the real interactive render —
+hover states, scroll-triggered motion, the WebGL layer running — inside the
+side panel, not a static image standing in for it. For a multi-page site,
+publish the home page plus one page per distinct template; a case study and a
+blog post that share a template do not each need their own review artifact.
+
+Large image sets can make a fully inlined file unwieldy. When that happens,
+say so and fall back rather than silently shipping a slow or broken preview.
+
+**Fallback, still on Claude Code.** When a technique genuinely cannot be
+flattened — it depends on real file paths, a service worker, or something
+else an inlined single file cannot fake — serve the build locally, take real
+screenshots with a headless browser, or open it in an actual browser
+alongside the human and look at it together. Reviewing it live, side by side,
+beats a screenshot even when an Artifact is not possible.
+
+**On any other platform.** Serve the built site locally and preview it there
+— the platform's own dev server if it has one, otherwise a plain static
+server. Whatever browser automation that platform provides takes it from
+there; failing that, the human opens `localhost` themselves and confirms.
+Local-and-live still differ (`§14`), but a live local render clears a much
+lower bar of doubt than an image ever could.
+
 > ## Gate C — human decision
 >
-> Show the local screenshots: three widths, both color modes, reduced motion. Walk
-> the copy. State what is about to happen, to which host, at which URL, and what
-> the rollback is. Get an explicit yes.
+> Show the preview — the Artifact, the live local render, or the browser
+> looked at together, whichever tier applied. Walk the copy. State what is
+> about to happen, to which host, at which URL, and what the rollback is. Get
+> an explicit yes.
 >
 > **This gate cannot be skipped, collapsed, or assumed.** Not for time pressure, not
 > because earlier gates were skipped, not because the human said "just ship it"
 > three loops ago. Approval to build is not approval to publish.
+>
+> A preview clears this gate. It does not replace Loop 8 — the live URL still
+> gets its own look once it exists.
 
 ## Confirm the identity — hard rule (`§20`)
 

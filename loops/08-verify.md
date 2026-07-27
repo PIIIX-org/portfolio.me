@@ -1,4 +1,4 @@
-# Loop 7 — Verify
+# Loop 8 — Verify
 
 **Goal:** confirm with your eyes that the live site works, and write down honestly
 what this run actually produced.
@@ -26,7 +26,7 @@ headers, TLS, and whatever the host rewrites.
 | 3 | **Reduced motion** | OS setting on: still a designed page, not a broken one |
 | 4 | **No WebGL** | Blocked or unavailable: the fallback carries the section |
 | 5 | **Keyboard** | Tab everything. Visible focus, no traps, skip link works |
-| 6 | **axe** | Zero violations. Not "zero criticals" |
+| 6 | **axe** | Zero violations. Not "zero criticals" — and not the whole check; see 18 |
 | 7 | **Contrast** | Body text ≥ 4.5:1 measured on the live render, including over translucency and imagery |
 | 8 | **Alt text** | Every image. Descriptive, not filename |
 | 9 | **Lighthouse** | Perf, a11y, best practices, SEO. Record all four |
@@ -38,6 +38,21 @@ headers, TLS, and whatever the host rewrites.
 | 15 | **Console** | Zero errors on load and after a full scroll |
 | 16 | **TLS and redirects** | `https` works, `http` redirects, apex and `www` both resolve deliberately |
 | 17 | **Mobile browser** | A real phone if one is available. Emulation misses touch, and iOS Safari misses more |
+| 18 | **Assistive technology** | A real screen reader — VoiceOver, NVDA — if available. Heading and landmark navigation makes sense, alt text reads sensibly spoken rather than just present, forms announce their labels. axe checks structure; this checks whether the structure actually works for someone using it |
+
+## Why 18 is not just 17 plus one
+
+`§12` is one of five rules this pipeline cannot skip. `axe` is a static linter
+— it does not drive real focus, and it cannot tell you whether a screen
+reader narrates the page in an order that makes sense. A hard rule enforced
+by a check that catches roughly a third of real accessibility problems is
+weaker than the doctrine claims to be. Row 18 is what makes the "accessible"
+in "accessible by default" true rather than aspirational.
+
+Same framing as row 17's "if available" — a real device beats emulation, and
+a real screen reader beats a linter, but neither is always at hand. When
+genuinely unavailable, say so in the report rather than silently skipping the
+row; `§18` applies here too.
 
 ## Then look at the screenshots yourself
 

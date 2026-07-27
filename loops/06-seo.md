@@ -6,9 +6,9 @@ answer engines, without bending the voice `§11` exists to protect.
 **Input:** the built site, `ARCHITECTURE.md` (the real page list), `BRIEF.md`
 (positioning and audience), `EVIDENCE.md`, `COPY.md`.
 
-**Output:** `sitemap.xml`, `robots.txt`, canonical tags confirmed, expanded
-structured data, a heading and meta audit, and — once Loop 7 has put the site
-live — search engine submission.
+**Output:** `sitemap.xml`, `robots.txt`, `llms.txt`, canonical tags confirmed,
+expanded structured data, a heading and meta audit, and — once Loop 7 has put
+the site live — search engine submission.
 
 A portfolio nobody can find failed at being found, not at being built. This loop
 is the difference.
@@ -68,6 +68,34 @@ during build has no business in the sitemap.
 
 Drafts, redirected slugs, and anything `noindex` are excluded. `lastmod` is the
 real commit date of that page, not today stamped on everything.
+
+## `llms.txt`
+
+The same job as `robots.txt`, aimed at AI answer engines instead of search
+crawlers: a plain-markdown file at the site root that tells a model what the
+site is and where the substance lives, so a citation is accurate rather than
+guessed from a partial crawl.
+
+```markdown
+# Name
+
+> One line: the positioning from `BRIEF.md`, verbatim.
+
+## Work
+- [Project name](https://example.com/work/project-slug): one real sentence, from EVIDENCE.md
+- [Project name](https://example.com/work/other-slug): one real sentence, from EVIDENCE.md
+
+## Writing
+- [Post title](https://example.com/writing/post-slug): one real sentence
+
+## About
+- [About](https://example.com/about)
+```
+
+Same rule as everywhere else: every line traces to `BRIEF.md`, `COPY.md`, or
+`EVIDENCE.md`. This is a summary of what the site already says, never a new
+claim invented for the file. Skip it entirely for an unlisted site — the same
+indexing decision that governs `robots.txt` governs this.
 
 ## Canonical URLs
 
@@ -176,6 +204,7 @@ Record what was submitted, and under which account, in `runs/<slug>/REPORT.md`.
 | Skipping | Costs |
 |---|---|
 | `sitemap.xml` / `robots.txt` | Search engines still find the site eventually through links, slower and less completely |
+| `llms.txt` | An AI answer engine still crawls and cites the site, working from a partial read instead of the summary that would have kept it accurate |
 | Canonical audit | Duplicate-content confusion if the site is ever mirrored, staged, or migrated |
 | Titles and descriptions | Generic or duplicate results in search, which reads as unmaintained |
 | Structured data | No rich result, no breadcrumb in search, a weaker basis for an AI answer engine to cite the site correctly |
