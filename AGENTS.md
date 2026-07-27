@@ -30,11 +30,12 @@ human gates.
 | 3 | [Copy](./loops/03-copy.md) — case studies in their voice | — |
 | 4 | [Build](./loops/04-build.md) — code to the images, all three states | — |
 | 5 | [Share & Convert](./loops/05-share.md) — OG image, meta, contact path | — |
-| 6 | [Deploy](./loops/06-deploy.md) — their target, snapshot first | **C** |
-| 7 | [Verify](./loops/07-verify.md) — live, three widths, honest grade | — |
+| 6 | [SEO & Discoverability](./loops/06-seo.md) — sitemap, robots.txt, structured data | — |
+| 7 | [Deploy](./loops/07-deploy.md) — their target, snapshot first | **C** |
+| 8 | [Verify](./loops/08-verify.md) — live, three widths, honest grade | — |
 
 Updating a site this pipeline already built? Enter at
-[`loops/08-rerun.md`](./loops/08-rerun.md) instead of Loop 0.
+[`loops/09-rerun.md`](./loops/09-rerun.md) instead of Loop 0.
 
 ## Supporting doctrine
 

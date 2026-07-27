@@ -35,7 +35,9 @@ def counts():
         "rules": len(re.findall(r"^## \d+\.", p, re.M)),
         # only rule headings count — the prose mentions [HARD] too
         "hard": len(re.findall(r"^## \d+\..*\[HARD", p, re.M)),
-        "loops": len(glob.glob(os.path.join(ROOT, "loops", "*.md"))),
+        # rerun is a mode entered instead of Loop 0, not a numbered loop — exclude it
+        "loops": len([f for f in glob.glob(os.path.join(ROOT, "loops", "*.md"))
+                       if "rerun" not in f]),
         "gates": 4,
         "agents": len(glob.glob(os.path.join(ROOT, "agents", "*.md"))),
         "targets": len(glob.glob(os.path.join(ROOT, "deploy", "*.md"))),
@@ -121,11 +123,11 @@ def plate(num, name, hard=False):
 
 
 def pipeline(n):
-    """The eight loops as a heating filament, gates as hard stops that break it."""
-    W, H = 880, 150
+    """The nine loops as a heating filament, gates as hard stops that break it."""
+    W, H = 940, 150
     loops = ["bootstrap", "substance", "design", "copy",
-             "build", "share", "deploy", "verify"]
-    gates = {1: "A", 2: "B1·B2", 6: "C"}
+             "build", "share", "seo", "deploy", "verify"]
+    gates = {1: "A", 2: "B1·B2", 7: "C"}
     x0, x1 = 60, W - 60
     step = (x1 - x0) / (len(loops) - 1)
     y = 74
@@ -146,8 +148,8 @@ def pipeline(n):
         marks.append(f'<text x="{x:.1f}" y="{y+24}" text-anchor="middle" font-family="{FONT}" font-size="10.5" fill="{TEXT}">{name}</text>')
         marks.append(f'<text x="{x:.1f}" y="{y+37}" text-anchor="middle" font-family="{FONT}" font-size="9" fill="{DIM}">{i}</text>')
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="The pipeline: eight loops from bootstrap to verify, heating left to right. Human gates at A after substance, B1 and B2 during design, and C before deploy.">
-<title>The pipeline — eight loops, four gates</title>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="The pipeline: nine loops from bootstrap to verify, heating left to right. Human gates at A after substance, B1 and B2 during design, and C before deploy.">
+<title>The pipeline — nine loops, four gates</title>
 <defs><linearGradient id="fil" x1="0" x2="1">{''.join(seg)}</linearGradient></defs>
 <rect width="{W}" height="{H}" rx="14" fill="{INK}"/>
 <rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{EDGE}" stroke-opacity=".2"/>

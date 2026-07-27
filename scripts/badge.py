@@ -113,7 +113,9 @@ def count(pattern):
 
 def build():
     """Every badge, keyed by filename. Counts are read off the repo, never typed."""
-    loops = count("loops/*.md")
+    # rerun is a mode entered instead of Loop 0, not a numbered loop — exclude it
+    loops = len([f for f in glob.glob(os.path.join(ROOT, "loops", "*.md"))
+                 if "rerun" not in f])
     return {
         "forged-with.svg": attribution(),
         "runs.svg": stat("portfolios forged", count_runs()),

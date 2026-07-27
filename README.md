@@ -59,12 +59,12 @@ The other twenty, at a cost stated once and written into the run:
 ## The pipeline
 
 <p align="center">
-  <img src="assets/pipeline.svg" alt="Eight loops from bootstrap to verify, drawn as a filament heating from cold at intake to white-hot at deploy. Human gates at A after substance, B1 and B2 during design, and C before anything goes public." width="880">
+  <img src="assets/pipeline.svg" alt="Nine loops from bootstrap to verify, drawn as a filament heating from cold at intake to white-hot at deploy. Human gates at A after substance, B1 and B2 during design, and C before anything goes public." width="940">
 </p>
 
 Loop 1 decides the rest. The interview is the only source of the story, the voice,
 and the strategy, and every later loop reads what it produced. Run it thin and you
-get eight thin loops — no model in Loop 4 repairs a shallow Loop 1.
+get nine thin loops — no model in Loop 4 repairs a shallow Loop 1.
 
 That is also why the cheap-early instinct is wrong here. What is genuinely
 mechanical at the start is the scrape, and that runs at the bottom tier in
@@ -84,7 +84,7 @@ parallel while the interview happens ([`MODELS.md`](./MODELS.md)).
 
 ## The craft
 
-<img src="assets/badges/loops.svg" alt="8 loops" height="30"> <img src="assets/badges/gates.svg" alt="4 human gates" height="30"> <img src="assets/badges/agents.svg" alt="7 worker agents" height="30"> <img src="assets/badges/targets.svg" alt="9 deploy targets" height="30"> <img src="assets/badges/rules.svg" alt="25 binding rules" height="30">
+<img src="assets/badges/loops.svg" alt="9 loops" height="30"> <img src="assets/badges/gates.svg" alt="4 human gates" height="30"> <img src="assets/badges/agents.svg" alt="7 worker agents" height="30"> <img src="assets/badges/targets.svg" alt="9 deploy targets" height="30"> <img src="assets/badges/rules.svg" alt="25 binding rules" height="30">
 
 Advanced visual technique is the point. 72 techniques in
 [`CRAFT.md`](./CRAFT.md) — raymarching and SDFs, curl-noise flow fields,

@@ -1,6 +1,6 @@
 ---
 name: site-verifier
-description: Loop 7 worker for portfolio.me. Runs the 17-check live checklist against the LIVE URL, never the local build. Screenshots at 360/768/1440 in both color modes and reduced motion, runs axe and Lighthouse, measures frame rate under scroll, clicks every link, exercises the contact path, and checks the unfurl. Writes runs/<slug>/REPORT.md with an honest confidence grade graded against SKIPS.md, failures on the first page. Returns the grade, the failures, and the report path.
+description: Loop 8 worker for portfolio.me. Runs the 17-check live checklist against the LIVE URL, never the local build. Screenshots at 360/768/1440 in both color modes and reduced motion, runs axe and Lighthouse, measures frame rate under scroll, clicks every link, exercises the contact path, and checks the unfurl. Writes runs/<slug>/REPORT.md with an honest confidence grade graded against SKIPS.md, failures on the first page. Returns the grade, the failures, and the report path.
 tools: Bash, Read, Write, Grep
 ---
 
@@ -12,7 +12,7 @@ produced.
 matter: absolute paths, MIME types, compression, cache headers, TLS, and whatever the
 host rewrites. `HTTP 200` is not "it renders" (`§14`).
 
-Follow `loops/07-verify.md` and run all seventeen:
+Follow `loops/08-verify.md` and run all seventeen:
 
 1. **Renders at 360 / 768 / 1440.** Nothing overflows, collapses, or overlaps.
    Screenshot each into `runs/<slug>/shots/live/` and look at them.

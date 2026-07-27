@@ -101,9 +101,10 @@ present on every page including the deepest post.
 | **2b** | Techniques are assigned per template. A heavy hero on the home page is fine; the same on every post is not |
 | **3** | Copy is per page. Blog posts are the subject's, not yours — you build the machinery and write at most a seed post they approve |
 | **4** | The shell contract spans pages. Tokens, nav, and the head are shared; per-page code is not |
-| **5** | Per-page meta and OG. A sitemap. An RSS feed for the blog, which costs nothing and is the one thing writers ask for |
-| **6** | Some adapters need routing config: `_redirects`, `vercel.json`, `.htaccess`, or an nginx `try_files` |
-| **7** | Verify every template at three widths, not just the home page |
+| **5** | Per-page meta and OG. An RSS feed for the blog, which costs nothing and is the one thing writers ask for |
+| **6** | `sitemap.xml` covers every real page. Canonical and structured data confirmed per template, `BreadcrumbList` added below the home page |
+| **7** | Some adapters need routing config: `_redirects`, `vercel.json`, `.htaccess`, or an nginx `try_files` |
+| **8** | Verify every template at three widths, not just the home page |
 
 ## Per-page share layer
 
@@ -130,7 +131,7 @@ visual language (`§10`). One template, N images, no manual work per post.
 ## Handing over the keys
 
 The run does not end at a deployed site. It ends when the subject can publish without
-you. Loop 6 delivers, in their repository:
+you. Loop 7 delivers, in their repository:
 
 1. How to add a post: the exact file path, the frontmatter fields, one worked example
 2. How to preview locally: one command

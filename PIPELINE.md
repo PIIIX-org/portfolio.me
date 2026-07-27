@@ -1,7 +1,7 @@
 # The pipeline
 
 `portfolio.me` turns a person into a deployed portfolio site — researched,
-positioned, designed, built, and live on infrastructure they chose. It runs eight
+positioned, designed, built, and live on infrastructure they chose. It runs nine
 loops with human gates between them. It is an agent operating system: markdown
 instructions a capable coding agent executes, not a program you install.
 
@@ -26,7 +26,7 @@ taste. Every visual is generated rather than borrowed, every technique is proven
 a prototype before the design leans on it, and every claim traces to a source. The
 result looks like *them*, works on a phone, and doesn't rot.
 
-## The eight loops
+## The nine loops
 
 | # | Loop | File | Output | Gate |
 |---|------|------|--------|------|
@@ -36,8 +36,9 @@ result looks like *them*, works on a phone, and doesn't rot.
 | **3** | Copy | [`loops/03-copy.md`](./loops/03-copy.md) | `COPY.md` — case studies, hero, about, in their voice | — |
 | **4** | Build | [`loops/04-build.md`](./loops/04-build.md) | The site: coded to the images, vendored, responsive | — |
 | **5** | Share & Convert | [`loops/05-share.md`](./loops/05-share.md) | OG image, meta, schema, favicons, the contact path | — |
-| **6** | Deploy | [`loops/06-deploy.md`](./loops/06-deploy.md) | Live URL on their infrastructure, rollback documented | **C** |
-| **7** | Verify | [`loops/07-verify.md`](./loops/07-verify.md) | Live shots at 3 widths, a11y + perf pass, `REPORT.md` + grade | — |
+| **6** | SEO & Discoverability | [`loops/06-seo.md`](./loops/06-seo.md) | `sitemap.xml`, `robots.txt`, canonical tags, expanded structured data | — |
+| **7** | Deploy | [`loops/07-deploy.md`](./loops/07-deploy.md) | Live URL on their infrastructure, rollback documented | **C** |
+| **8** | Verify | [`loops/08-verify.md`](./loops/08-verify.md) | Live shots at 3 widths, a11y + perf pass, `REPORT.md` + grade | — |
 
 The binding rules are in [`PRINCIPLES.md`](./PRINCIPLES.md). Read them first. The
 supporting doctrine: [`BRAND.md`](./BRAND.md) (strategy),
@@ -46,7 +47,7 @@ supporting doctrine: [`BRAND.md`](./BRAND.md) (strategy),
 render it), [`MODELS.md`](./MODELS.md) (which tier runs which step),
 [`SKIPPING.md`](./SKIPPING.md) (what it costs to leave a step out).
 
-There is also a mode rather than a loop: [`loops/08-rerun.md`](./loops/08-rerun.md),
+There is also a mode rather than a loop: [`loops/09-rerun.md`](./loops/09-rerun.md),
 entered instead of Loop 0 when updating a site this pipeline already built.
 
 ## The gates
@@ -58,7 +59,7 @@ Four stops. The human decides at each one.
 | **A** | Loop 1 | Archetype, positioning, audience, which projects earn a slot, deploy target |
 | **B1** | Loop 2a | The concept and style, from rendered design images |
 | **B2** | Loop 2b | Techniques, motion character, performance budget |
-| **C** | Loop 6 | The final site, before it becomes publicly visible. **Cannot be skipped** (`§16`) |
+| **C** | Loop 7 | The final site, before it becomes publicly visible. **Cannot be skipped** (`§16`) |
 
 ## Skipping
 

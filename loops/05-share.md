@@ -99,10 +99,9 @@ Only if something is collected. A form means an EU visitor makes an imprint and 
 privacy line a legal requirement, not a preference. Skip entirely when nothing is
 collected — that is the common case and it needs no page.
 
-## The `robots.txt` question
-
-Ask. Some people want the site indexed; some want it sent to specific people only.
-Do not assume. Sitemap if indexed.
+The indexing decision, `robots.txt`, `sitemap.xml`, and structured data beyond
+`Person` belong to [`loops/06-seo.md`](./06-seo.md), which runs right after this
+one.
 
 ## Skip cost
 

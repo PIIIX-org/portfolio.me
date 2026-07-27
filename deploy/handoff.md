@@ -5,7 +5,7 @@
 ---
 
 **This site is not live.** Handoff is a legitimate end state
-(`loops/06-deploy.md`), and the one way it fails is by being described in
+(`loops/07-deploy.md`), and the one way it fails is by being described in
 language that lets someone assume otherwise. No URL exists. Nothing is publicly
 visible. Say that in the first line of the handover message, in `REPORT.md`, and
 in the README that ships with the folder.
@@ -167,5 +167,5 @@ so the upgrade is a known edit and not an archaeology exercise.
 - **Someone publishes it and nobody records where.** Ask for the URL when it
   happens, and get it into `REPORT.md`.
 - **Screenshots stand in for verification.** Handoff skips the live check in
-  `loops/07-verify.md` by definition. Record that in `SKIPS.md` with its cost
+  `loops/08-verify.md` by definition. Record that in `SKIPS.md` with its cost
   (`§18`): nobody has confirmed how this renders on a real host.

@@ -17,6 +17,6 @@ Settle the site shape at Gate A — single page, multi-page, or multi-page with 
 (`ARCHITECTURE.md`). It decides the stack, so it cannot wait for the build.
 
 If no subject was given, ask who this is for. If the site already exists and this is
-an update, enter at `loops/08-rerun.md` instead of Loop 0.
+an update, enter at `loops/09-rerun.md` instead of Loop 0.
 
 Never publish past a gate without a human decision.

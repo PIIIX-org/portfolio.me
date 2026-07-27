@@ -52,11 +52,12 @@ Create a todo per loop and work them in order. Loop files are in
 | 3 | [Copy](../../loops/03-copy.md) — case studies in their voice | — |
 | 4 | [Build](../../loops/04-build.md) — code to the images, all three states | — |
 | 5 | [Share & Convert](../../loops/05-share.md) — OG image, meta, contact path | — |
-| 6 | [Deploy](../../loops/06-deploy.md) — their target, snapshot first | **C** |
-| 7 | [Verify](../../loops/07-verify.md) — live, three widths, honest grade | — |
+| 6 | [SEO & Discoverability](../../loops/06-seo.md) — sitemap, robots.txt, structured data | — |
+| 7 | [Deploy](../../loops/07-deploy.md) — their target, snapshot first | **C** |
+| 8 | [Verify](../../loops/08-verify.md) — live, three widths, honest grade | — |
 
 Updating a site this pipeline already built? Enter at
-[`loops/08-rerun.md`](../../loops/08-rerun.md) instead of Loop 0. The design system
+[`loops/09-rerun.md`](../../loops/09-rerun.md) instead of Loop 0. The design system
 is locked by default; a re-run that quietly redesigns is the failure mode.
 
 ## Decide the site shape at Gate A
@@ -71,7 +72,7 @@ hand-authored HTML: the subject has to publish without you, and hand-editing HTM
 is exactly the friction that stops people writing. Ask whether they will actually
 write, and take the honest answer.
 
-The run ends when they can publish on their own. Loop 6 writes a tested
+The run ends when they can publish on their own. Loop 7 writes a tested
 `CONTRIBUTING.md` in their repo.
 
 ## Loop 1 is the one that decides everything
@@ -131,6 +132,6 @@ all four hard rules and Gate C. Grade ceiling **B**.
 
 ## The report is the deliverable
 
-Loop 7 writes `runs/<slug>/REPORT.md` with an honest confidence grade. A **D**
+Loop 8 writes `runs/<slug>/REPORT.md` with an honest confidence grade. A **D**
 stated plainly beats an **A** claimed falsely. The grade exists so the human knows
 what they actually have.

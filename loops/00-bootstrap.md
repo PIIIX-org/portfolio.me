@@ -17,7 +17,7 @@
 | 5 | **Image generation** | `imagegen-frontend-web` or equivalent | Loop 2a runs as written concepts instead of images; Gate B1 gets worse |
 | 6 | **Image sampling** | `python3 -c "import PIL"` | `pip install Pillow`, or use ImageMagick, or `§8` gets guessed |
 | 7 | **Prose skills** | `stop-slop`, `copywriting`, `ogilvy` | Install via `find-skills`. Loop 3 degrades without them |
-| 8 | **Deploy CLI** | depends on target — see below | Loop 6 becomes handoff mode |
+| 8 | **Deploy CLI** | depends on target — see below | Loop 7 becomes handoff mode |
 
 Check them, report what you have in one line, and move on. Do not spend a long time
 here.
@@ -39,7 +39,7 @@ row after Gate A.
 | Handoff | nothing |
 
 Missing CLI is not a blocker. Say which one, offer to install it, and continue —
-the target only has to work by Loop 6.
+the target only has to work by Loop 7.
 
 ## Set up the run
 
@@ -60,6 +60,6 @@ conversation rather than following a capability audit.
 
 ## Skip cost
 
-Skipping bootstrap costs you a failure in Loop 6 or 7 instead of a two-minute check
+Skipping bootstrap costs you a failure in Loop 7 or 8 instead of a two-minute check
 in Loop 0. Nothing else. It is the cheapest loop to run and the most annoying one
 to have skipped.

@@ -73,11 +73,14 @@ Tiers are named rather than versioned so this file does not rot. Current mapping
 | **4 Section builds** (`section-builder`) | Mid | Coding to an approved image with the design settled |
 | **4 Vendoring, budget, meta** | Low | Mechanical with a pass condition |
 | **5 OG image and share** | Mid | Design work inside a settled system |
-| **6 Deploy commands** | Low | Adapter commands with right answers |
-| **6 Gate C and go/no-go** | **Top** | Irreversible, and the one gate that never skips (`§16`) |
-| **7 Checklist** (`site-verifier`) | Low | axe, Lighthouse, links, console. Pass or fail |
-| **7 Looking at the screenshots** | **Top** | An automated pass and a page that looks wrong are compatible states (`§14`) |
-| **8 Rot check** | Mid | Structured comparison against a known previous state |
+| **6 Sitemap, robots.txt, canonical** | Low | Generated from the real page list, right answer |
+| **6 Structured data** | Low | Fields sourced from `EVIDENCE.md`, right or wrong |
+| **6 Keyword-intent audit** | Mid | Reads Loop 3's copy against a fixed brief, does not rewrite it |
+| **7 Deploy commands** | Low | Adapter commands with right answers |
+| **7 Gate C and go/no-go** | **Top** | Irreversible, and the one gate that never skips (`§16`) |
+| **8 Checklist** (`site-verifier`) | Low | axe, Lighthouse, links, console. Pass or fail |
+| **8 Looking at the screenshots** | **Top** | An automated pass and a page that looks wrong are compatible states (`§14`) |
+| **9 Rot check** | Mid | Structured comparison against a known previous state |
 
 ## Who switches what
 
@@ -134,7 +137,7 @@ On a low-tier session: the mechanical loops are fine and the judgment loops are
 where it shows. The interview asks flatter questions and takes the first answer. The
 concepts land closer to the category reflex `§1` exists to prevent. The voice pass
 reads like a model writing in someone's voice rather than the person talking. None of
-these fail a check in Loop 7, which is what makes this skip the quiet one: the site
+these fail a check in Loop 8, which is what makes this skip the quiet one: the site
 passes, and it is a worse site.
 
 Record the skip and note the session tier in `SKIPS.md`, so the grade means something.

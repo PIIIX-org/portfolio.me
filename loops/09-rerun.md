@@ -7,8 +7,8 @@ redesigning it.
 
 **Output:** the updated site live, and the change recorded in `REPORT.md`.
 
-**This is a mode, not the eighth loop.** Entered instead of Loop 0, it re-enters the
-numbered loops wherever the change actually lands. Nothing here runs after Loop 7.
+**This is a mode, not a numbered loop.** Entered instead of Loop 0, it re-enters the
+numbered loops wherever the change actually lands. Nothing here runs after Loop 8.
 
 The most common request after the initial build is "add this project, don't redesign
 it." Both halves are the instruction, which is why this mode starts by reading.
@@ -42,9 +42,10 @@ inferred rather than read. A reconstruction is not a brief.
 
 | Request | What it touches | Re-enters at |
 |---|---|---|
-| Add a project or a blog post | Copy, build, share, deploy, verify | Loop 3 |
+| Add a project or a blog post | Copy, build, share, SEO, deploy, verify | Loop 3 |
 | Update a claim or a number | Evidence, then copy. Re-check `§5` | Loop 1 evidence, then Loop 3 |
 | Fix something broken | Build, then verify | Loop 4 |
+| Sitemap, robots.txt, or an indexing change | SEO only | Loop 6 |
 | Restyle or refresh | Direction and everything downstream | Loop 2, existing `BRIEF.md` |
 | Strategy change: new audience, career pivot | All of it | Loop 1, full re-run |
 
@@ -106,7 +107,7 @@ what it takes, so re-runs stay light and people keep asking for them.
 
 ## Deploy and verify
 
-Snapshot before overwriting (`§15`, hard), exactly as Loop 6 does. It matters more here
+Snapshot before overwriting (`§15`, hard), exactly as Loop 7 does. It matters more here
 than on a first build: there is something live to lose, and it is the version the subject
 has been sending to people.
 
@@ -117,7 +118,7 @@ changed page; the unfurl, if meta or the OG image was touched.
 
 **Say which subset ran, in the report.** A scoped verification described as a full one
 is a false grade. When the change touched the shell, the tokens, or anything shared, the
-scope is all of Loop 7 and there is no subset.
+scope is all of Loop 8 and there is no subset.
 
 ## The report
 
