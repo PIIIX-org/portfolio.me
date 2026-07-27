@@ -33,6 +33,37 @@ Ask **one question at a time**. Open-ended. Do not offer multiple choice: the an
 has to be theirs, and a list of options contaminates it with yours. Follow the
 thread where it goes. React to what they actually said before moving on.
 
+### Live, or recorded
+
+Ask which they'd rather do, before asking the first real question. Some people
+think better talking alone than in a back-and-forth; forcing live chat on them
+gets guarded, shorter answers than they're capable of.
+
+**Live** is the default above: one question at a time, in the room.
+
+**Recorded** — they answer the same question sets alone, at their own pace, as a
+voice memo or video, and drop it in `runs/<slug>/inbox/`, the same place
+documents land for Loop 1b. Then:
+
+1. **Transcribe it.** Mechanical, bottom tier ([`MODELS.md`](../MODELS.md)) —
+   whatever transcription capability is available. No capability at hand: ask
+   them for a transcript instead of the raw file, rather than skipping this mode.
+2. **Extract from the transcript** exactly as you would from a live answer —
+   same structure, same top tier, same rule to record their sentences verbatim
+   rather than paraphrase. A recording is often the *better* voice sample: people
+   edit themselves less talking than typing, and `BRAND.md`'s verbal identity
+   wants their real rhythm, not their revised one.
+3. **Follow up.** A monologue can't have you interject on a good answer the way
+   a live question can. Read the transcript for what it left open — the same
+   instinct that produces the scrape's gap list in 1c — and ask a short, targeted
+   set of follow-ups, live or as one more short recording, whichever they'd
+   rather. This step is what keeps recorded from being the shallow option; skip
+   it and the interview is thinner than live would have been, at the same cost
+   as skipping the interview partway (`SKIPPING.md`).
+
+Note in `BRIEF.md` which mode ran. Both are the real interview; recorded is not
+a fallback.
+
 ### Vision
 
 > What should someone feel in the first three seconds, before they've read a word?

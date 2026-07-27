@@ -57,6 +57,8 @@ Tiers are named rather than versioned so this file does not rot. Current mapping
 |---|---|---|
 | **0 Bootstrap** | Low | Capability checks with right answers |
 | **1a Interview** | **Top** | Reading a human. The output every other loop consumes |
+| **1a Transcription (recorded interview)** | Low | Audio or video to text, mechanical |
+| **1a Extraction and follow-up (recorded interview)** | **Top** | Same reading-a-human work as live, from a transcript instead of the room |
 | **1b Documents** (`evidence-miner`) | Low | Extraction from documents |
 | **1c Scrape** (`evidence-miner`) | Low | API calls and listing |
 | **1c Peers** (`peer-analyst`) | Mid | Charting against a fixed rubric |

@@ -24,9 +24,12 @@ There is no program to install. The pipeline is markdown; the agent is the runti
 
 **Loop 0** — nothing. It checks its own capabilities and makes a run folder.
 
-**Loop 1** — the interview. One question at a time, open-ended. This is the part
-that decides whether the output is a portfolio or a résumé with a gradient. Budget
-real time for it. It will also ask where the site deploys.
+**Loop 1** — the interview. First it asks whether you'd rather do this live, one
+question at a time, or record yourself answering alone and drop it in the inbox
+— both are the real interview, recorded is not a shortcut, and it follows up
+afterward either way. This is the part that decides whether the output is a
+portfolio or a résumé with a gradient. Budget real time for it. It will also ask
+where the site deploys.
 
 Drop any documents you have — résumé, case studies, screenshots, old site — into
 `runs/<slug>/inbox/` before this loop.
@@ -46,7 +49,10 @@ you do.
 
 Around the same point, you'll be asked once whether to add the run to the
 public [showcase](./SHOWCASE.md) — entirely optional, and only a screenshot
-and a short summary, never your evidence or interview.
+and a short summary, never your evidence or interview. You'll also be asked
+once whether you want a small, opt-in monitor added to your own repo — it
+watches the live site weekly and opens an issue if something rots. It never
+touches the site itself.
 
 ## Skipping
 

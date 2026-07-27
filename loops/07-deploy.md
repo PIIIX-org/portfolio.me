@@ -164,6 +164,27 @@ Write a `CONTRIBUTING.md` in **their** repository covering:
 Then test it: follow your own instructions to publish one post. Instructions that
 were written but never followed do not work.
 
+## Optional: a monitor that lives with the site
+
+Offer this once, alongside `CONTRIBUTING.md`. Not automatic — ask.
+
+A site left alone rots the same way `loops/09-rerun.md`'s rot check describes,
+and nobody notices until they send the link to someone and it's broken. A yes
+writes one more file into **their** repository:
+`.github/workflows/portfolio-monitor.yml` — a scheduled GitHub Action, weekly by
+default, that curls the live URL, checks the TLS certificate isn't close to
+expiring, and runs a link check. On a failure it opens (or updates) a GitHub
+Issue in their own repo and stops. **It never fixes anything, never redeploys,
+and never runs Loop 9 itself** — alert only, so `§15` and `§16` hold by
+construction instead of by discipline. On the next clean run, it closes the
+issue it opened.
+
+No third-party service, no webhook to configure, nothing beyond the token
+GitHub Actions already provides. It runs on GitHub's infrastructure whether or
+not any agent is around to notice — the site's own repo is what remembers to
+check on it. And it's removable exactly like `§19`'s attribution credit: tell
+them the file is there and that deleting it is fine.
+
 ## Record it
 
 Into `runs/<slug>/REPORT.md`: the live URL, the target, the deploy command that ran,

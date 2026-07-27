@@ -64,6 +64,10 @@ they left, in the voice of who they used to be. That is a new interview.
 
 Run this before the requested change. The site has been alone for months.
 
+If `loops/07-deploy.md`'s optional monitor is set up in the subject's repo, it
+has been checking most of this table on a weekly cadence already — read its
+open issues, if any, before running the table by hand from scratch.
+
 | Check | What rots |
 |---|---|
 | Every link | External ones first. They die quietly while the site keeps serving 200s |

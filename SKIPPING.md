@@ -51,6 +51,7 @@ Each loop file repeats its own row. This is the whole map.
 | **6 SEO — submission** | Only speeds up discovery, it does not gate it. Skippable without much cost once the technical layer shipped. |
 | **7 Credibility audit** | The human's own Gate C review becomes the only check for voice drift, claim inflation, and whether the concept still holds up now that it's built. Nothing prevents this from shipping; it just costs the human more of their own attention at the gate to catch it themselves. |
 | **7 Deploy** | Nothing goes live. Output is a build folder plus run instructions. A legitimate end state — handoff mode. |
+| **7 Post-launch monitor** | Nothing watches the site between now and whenever someone thinks to check on it by hand. Purely opt-in — declining costs nothing beyond finding rot later than a weekly check would have. |
 | **8 Verify** | Confirmation it renders on real devices. `§14` says look at it; skipping means the first person to see it live is a stranger. |
 | **Model tiering** | Matching the model to the work ([`MODELS.md`](./MODELS.md)). On a top-tier session you lose only budget. On a low-tier one the mechanical loops are fine and the judgment loops show it: flatter interview questions, concepts closer to the category reflex, a voice pass that reads like a model writing in someone's voice. The quiet skip — none of it fails a Loop 8 check. The site passes and it is a worse site. Note the session tier here so the grade means something. |
 | **CV export** | A résumé that stays in sync with the site. |
