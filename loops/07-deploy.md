@@ -20,6 +20,21 @@ Loop 8 exists because a static screenshot and the live render are not the same
 claim (`§14`) — but Gate C happens before deploy, so it cannot review the live
 site yet. What it reviews instead should be as close to real as it can get.
 
+### Red-team it first
+
+Before building the preview, dispatch `credibility-auditor` against the
+finished site. Loop 3's prose passes and Loop 2a's category-reflex check were
+both self-applied — the same agent grading its own work. This is the
+independent second read, on the built site rather than a sketch: voice drift
+against `BRIEF.md`, claim framing against `EVIDENCE.md`, the category-reflex
+test run again now that it's real, and a check against `showcase/` for a
+pattern-match.
+
+It does not fix anything and it does not gate anything on its own — fold its
+findings into what Gate C shows the human, so their judgment spends its time
+on real decisions instead of catching what a second reader already could
+have.
+
 ### Build the preview
 
 **On Claude Code — publish it as an Artifact, not a screenshot.** This works
@@ -54,9 +69,9 @@ lower bar of doubt than an image ever could.
 > ## Gate C — human decision
 >
 > Show the preview — the Artifact, the live local render, or the browser
-> looked at together, whichever tier applied. Walk the copy. State what is
-> about to happen, to which host, at which URL, and what the rollback is. Get
-> an explicit yes.
+> looked at together, whichever tier applied — and `credibility-auditor`'s
+> findings alongside it. Walk the copy. State what is about to happen, to
+> which host, at which URL, and what the rollback is. Get an explicit yes.
 >
 > **This gate cannot be skipped, collapsed, or assumed.** Not for time pressure, not
 > because earlier gates were skipped, not because the human said "just ship it"

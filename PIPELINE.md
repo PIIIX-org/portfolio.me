@@ -45,7 +45,8 @@ supporting doctrine: [`BRAND.md`](./BRAND.md) (strategy),
 [`ARCHITECTURE.md`](./ARCHITECTURE.md) (how many pages, and the blog),
 [`STYLES.md`](./STYLES.md) (what it looks like), [`CRAFT.md`](./CRAFT.md) (how you
 render it), [`MODELS.md`](./MODELS.md) (which tier runs which step),
-[`SKIPPING.md`](./SKIPPING.md) (what it costs to leave a step out).
+[`SKIPPING.md`](./SKIPPING.md) (what it costs to leave a step out),
+[`SHOWCASE.md`](./SHOWCASE.md) (the opt-in gallery of real runs).
 
 There is also a mode rather than a loop: [`loops/09-rerun.md`](./loops/09-rerun.md),
 entered instead of Loop 0 when updating a site this pipeline already built.
@@ -107,7 +108,8 @@ the deploy step are never delegated.
 | `technique-prototyper` | 2b | One per technique: research it, build a runnable proof, screenshot it |
 | `case-study-writer` | 3 | One per project: draft from evidence in the subject's voice |
 | `section-builder` | 4 | One per section: code to the approved image |
-| `site-verifier` | 7 | Live checklist, three widths, a11y, perf, report |
+| `credibility-auditor` | 7 | Independent second read before Gate C: voice, claim framing, template pattern-match |
+| `site-verifier` | 8 | Live checklist, three widths, a11y, perf, report |
 
 Each is dispatched at the tier its work needs ([`MODELS.md`](./MODELS.md)) — low for
 mining, scraping, and checklists; mid for anything following a spec. The conductor

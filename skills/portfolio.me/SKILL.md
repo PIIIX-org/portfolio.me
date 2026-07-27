@@ -20,7 +20,8 @@ once and record ([`SKIPPING.md`](../../SKIPPING.md)).
 Dispatch each worker at the tier its work needs ([`MODELS.md`](../../MODELS.md)) and
 do not ask: low for `evidence-miner` and `site-verifier`, mid for `peer-analyst`,
 `section-designer`, `technique-prototyper`, `case-study-writer`, and
-`section-builder`.
+`section-builder`. `credibility-auditor` is the one dispatched worker that runs top
+tier — the work is independent judgment, not execution against a spec.
 
 You cannot change your own model. The steps you run yourself that want the top tier
 are the interview, the synthesis, the concepts, the technique assignment, the voice
@@ -101,7 +102,9 @@ library via CDN while prototyping. The arsenal is a floor, not a boundary.
 Three rules hold it honest: every technique gets a **runnable prototype** before the
 design depends on it; every technique ships **three states** (full, designed
 reduced-motion, no-WebGL); and if the technique is more memorable than the project
-it frames, it is wrong (`§7`).
+it frames, it is wrong (`§7`). At 2a, also check [`SHOWCASE.md`](../../SHOWCASE.md)'s
+gallery for a prior run sharing this archetype and style — `§3` applies to this
+pipeline's own history, not only to what `peer-analyst` finds outside it.
 
 ## The deploy square
 
@@ -123,6 +126,7 @@ first-class option, not a fallback.
 - Snapshot before you overwrite; document the rollback (`§15`, hard)
 - Gate C is never skipped, collapsed, or assumed (`§16`, hard)
 - Skipping is allowed. Silent degradation is not (`§18`)
+- Dispatch `credibility-auditor` before Gate C; fold its findings into what the human sees, never hide or auto-fix them
 
 ## Express mode
 

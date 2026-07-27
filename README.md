@@ -84,7 +84,7 @@ parallel while the interview happens ([`MODELS.md`](./MODELS.md)).
 
 ## The craft
 
-<img src="assets/badges/loops.svg" alt="9 loops" height="30"> <img src="assets/badges/gates.svg" alt="4 human gates" height="30"> <img src="assets/badges/agents.svg" alt="7 worker agents" height="30"> <img src="assets/badges/targets.svg" alt="9 deploy targets" height="30"> <img src="assets/badges/rules.svg" alt="25 binding rules" height="30">
+<img src="assets/badges/loops.svg" alt="9 loops" height="30"> <img src="assets/badges/gates.svg" alt="4 human gates" height="30"> <img src="assets/badges/agents.svg" alt="8 worker agents" height="30"> <img src="assets/badges/targets.svg" alt="9 deploy targets" height="30"> <img src="assets/badges/rules.svg" alt="25 binding rules" height="30">
 
 Advanced visual technique is the point. 72 techniques in
 [`CRAFT.md`](./CRAFT.md) — raymarching and SDFs, curl-noise flow fields,
@@ -126,6 +126,7 @@ rollback, DNS and TLS, forms — so reading one teaches all nine.
 | [`CRAFT.md`](./CRAFT.md) | How it renders |
 | [`MODELS.md`](./MODELS.md) | Which model tier runs which step |
 | [`SKIPPING.md`](./SKIPPING.md) | What each step costs to leave out |
+| [`SHOWCASE.md`](./SHOWCASE.md) | The opt-in gallery, and the internal anti-template check it enables |
 | [`AGENTS.md`](./AGENTS.md) | The universal entry point for any agent |
 
 ## Run it

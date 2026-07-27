@@ -76,6 +76,7 @@ Tiers are named rather than versioned so this file does not rot. Current mapping
 | **6 Sitemap, robots.txt, canonical** | Low | Generated from the real page list, right answer |
 | **6 Structured data** | Low | Fields sourced from `EVIDENCE.md`, right or wrong |
 | **6 Keyword-intent audit** | Mid | Reads Loop 3's copy against a fixed brief, does not rewrite it |
+| **7 Credibility audit** (`credibility-auditor`) | **Top** | Independent judgment on voice, claim framing, and whether the built site still holds up — not a checklist |
 | **7 Deploy commands** | Low | Adapter commands with right answers |
 | **7 Gate C and go/no-go** | **Top** | Irreversible, and the one gate that never skips (`§16`) |
 | **8 Checklist** (`site-verifier`) | Low | axe, Lighthouse, links, console. Pass or fail |

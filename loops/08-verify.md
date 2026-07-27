@@ -6,6 +6,7 @@ what this run actually produced.
 **Input:** the live URL.
 
 **Output:** `runs/<slug>/REPORT.md` with a confidence grade, and `shots/`.
+Optionally, a prepared showcase entry — see below.
 
 ---
 
@@ -58,6 +59,22 @@ row; `§18` applies here too.
 
 The agent reports. You look. An automated pass and a page that looks wrong are
 compatible states, and only one of them is caught by a checklist.
+
+## Ask about the showcase
+
+Right here — the first moment real live screenshots exist to show. One
+question: would they like this run added to the public showcase in this repo
+([`../SHOWCASE.md`](../SHOWCASE.md)). Explain what would be shown (a
+screenshot, the archetype, the style, the palette, what was invented) and what
+never is (`EVIDENCE.md`, the interview, anything under `§21`, their name unless
+they want it).
+
+Record the answer in `REPORT.md` either way. A no is final; do not ask again.
+
+A yes means preparing `showcase/<slug>/` locally from
+[`showcase/_template/ENTRY.md`](../showcase/_template/ENTRY.md) — you do not
+open a pull request on their behalf. Tell them the files are ready and that
+submitting them is theirs to do.
 
 ## The report
 

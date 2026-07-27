@@ -39,11 +39,18 @@ the cut.
 **Gate B2** — you approve the techniques, motion, and performance budget.
 
 **Gate C** — you see the finished site before it goes public. This gate is not
-skippable.
+skippable. Alongside the preview, you'll see an independent second read of the
+finished copy and concept — voice, claims, whether it still holds up now that
+it's built — from an agent whose only job is arguing against the site before
+you do.
+
+Around the same point, you'll be asked once whether to add the run to the
+public [showcase](./SHOWCASE.md) — entirely optional, and only a screenshot
+and a short summary, never your evidence or interview.
 
 ## Skipping
 
-Say so. Any step except four is optional. The agent states the cost once, records
+Say so. Any step except five is optional. The agent states the cost once, records
 it, and moves on. See [`SKIPPING.md`](./SKIPPING.md).
 
 In a hurry: ask for **express mode**.

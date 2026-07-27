@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "portfolio.me",
-      "description": "Pipeline + skill + seven worker agents to research, position, design, build, and deploy a personal portfolio site to any of nine targets.",
+      "description": "Pipeline + skill + eight worker agents to research, position, design, build, and deploy a personal portfolio site to any of nine targets.",
       "source": "./",
       "category": "productivity"
     }

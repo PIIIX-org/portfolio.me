@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Generate every badge this project ships, as committed SVG.
+"""Generate every badge this project ships, as committed SVG, except one.
 
 No badge service, no external endpoint — the same rule the pipeline enforces on
-the sites it builds (PRINCIPLES.md §9). Run by .github/workflows/ci.yml.
+the sites it builds (PRINCIPLES.md §9). Run by .github/workflows/ci.yml, on every
+push, so these stay current with the repo.
 
     python3 scripts/badge.py            # write all badges
     python3 scripts/badge.py --check    # fail if any is stale (CI)
@@ -10,8 +11,12 @@ the sites it builds (PRINCIPLES.md §9). Run by .github/workflows/ci.yml.
 The attribution badge is the one that travels: it ships in the footer of every
 site this pipeline forges, and it carries a prefers-reduced-motion guard because
 §12 applies to our own artwork too.
+
+The "portfolios forged" badge is NOT here — see scripts/forge_count.py. It
+depends on a daily search, not on repo state, and regenerating it here on every
+push would silently overwrite that count back down to the local-only number.
 """
-import os, sys, glob
+import os, sys, glob, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets", "badges")
@@ -87,43 +92,30 @@ def stat(label, value):
 '''
 
 
-def count_runs():
-    """Runs that actually happened.
-
-    A Loop 0 scaffold is template copies with the placeholders still in them, and
-    counting one as a forged portfolio would be the kind of inflated number §5
-    exists to prevent. A run counts once its REPORT.md carries a real grade.
-    """
-    n = 0
-    for d in glob.glob(os.path.join(ROOT, "runs", "*")):
-        if not os.path.isdir(d) or os.path.basename(d) == "_template":
-            continue
-        report = os.path.join(d, "REPORT.md")
-        if not os.path.exists(report):
-            continue
-        if "<A / B / C / D>" in open(report, encoding="utf-8").read():
-            continue   # unfilled scaffold
-        n += 1
-    return n
-
-
 def count(pattern):
     return len(glob.glob(os.path.join(ROOT, pattern)))
 
 
+def count_rules():
+    """Rule headings in PRINCIPLES.md. Computed, not typed — a rule §25 added
+    later should not require remembering to update a number somewhere else."""
+    p = open(os.path.join(ROOT, "PRINCIPLES.md"), encoding="utf-8").read()
+    return len(re.findall(r"^## \d+\.", p, re.M))
+
+
 def build():
-    """Every badge, keyed by filename. Counts are read off the repo, never typed."""
+    """Every badge but one, keyed by filename. Counts are read off the repo,
+    never typed. (runs.svg lives in forge_count.py — see the module docstring.)"""
     # rerun is a mode entered instead of Loop 0, not a numbered loop — exclude it
     loops = len([f for f in glob.glob(os.path.join(ROOT, "loops", "*.md"))
                  if "rerun" not in f])
     return {
         "forged-with.svg": attribution(),
-        "runs.svg": stat("portfolios forged", count_runs()),
         "loops.svg": stat("loops", loops),
         "gates.svg": stat("human gates", 4),
         "targets.svg": stat("deploy targets", count("deploy/*.md")),
         "agents.svg": stat("worker agents", count("agents/*.md")),
-        "rules.svg": stat("binding rules", 25),   # §0-§24
+        "rules.svg": stat("binding rules", count_rules()),
     }
 
 

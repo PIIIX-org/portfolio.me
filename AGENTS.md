@@ -43,10 +43,11 @@ Updating a site this pipeline already built? Enter at
 |---|---|
 | [`BRAND.md`](./BRAND.md) | Archetype, positioning, voice, the translation table |
 | [`ARCHITECTURE.md`](./ARCHITECTURE.md) | How many pages, routing, and the blog |
-| [`STYLES.md`](./STYLES.md) | What it looks like: 32 styles and how to collide them |
+| [`STYLES.md`](./STYLES.md) | What it looks like: 48 styles and how to collide them |
 | [`CRAFT.md`](./CRAFT.md) | How it renders: the technique arsenal |
 | [`MODELS.md`](./MODELS.md) | Which model tier runs which step |
 | [`SKIPPING.md`](./SKIPPING.md) | What each step costs to leave out |
+| [`SHOWCASE.md`](./SHOWCASE.md) | The opt-in gallery, and the internal anti-template check it enables |
 
 ## What you never delegate
 

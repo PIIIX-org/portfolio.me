@@ -62,6 +62,12 @@ Run the category-reflex check on each: if it's guessable from "portfolio for a
 [category]" alone, or from category-plus-obvious-twist, throw it out. Note one you
 rejected and why, so the human sees the range.
 
+Then check [`../showcase/`](../showcase) for a prior entry sharing this run's
+archetype and style family — `peer-analyst`'s search already looked outward; this
+looks at what this pipeline itself has already produced. A match does not kill the
+concept, it forces the collision to differ from what is already there
+([`../SHOWCASE.md`](../SHOWCASE.md)).
+
 ### Design images
 
 Dispatch `section-designer`, **one agent per section**. Each returns one horizontal
