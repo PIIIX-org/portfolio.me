@@ -297,6 +297,20 @@ in the DOM from first paint, with content injected into it rather than the
 container itself appearing only once there is something to say — the same
 reasoning that keeps a live region announced reliably anywhere else in the site.
 
+## The skip link
+
+Every page needs one (`§12`), and how it looks is not settled by "it exists."
+
+Hide it off-screen with CSS — an absolute position pushed outside the
+viewport — never `display: none`, `visibility: hidden`, zero size, or a
+transparent match to the background. Each of those removes it from keyboard
+navigation entirely, the opposite of what the link is for (WebAIM).
+
+On focus, it becomes prominently visible — not a generic gray box, the site's
+own visual language at the exact moment someone who needs it is looking for
+it. Give it enough time on screen to actually be read; a link that flashes and
+is gone on the transition out has failed the person it exists for.
+
 ## The three states, per section
 
 Non-negotiable (`§12`). Each section ships:
@@ -383,6 +397,7 @@ Run these before the loop closes:
 | **Reduced motion** | Toggle the OS setting and look at it. It should still be a designed page |
 | **Console** | Zero errors, zero 404s |
 | **Absence states** | 404, empty blog index if there's one, and the failed-submission state are all built to the concept — none left as a framework default |
+| **Polish** | Scrollbar and `::selection` consume tokens, never browser defaults. Skip link hides off-screen, never `display: none`, and is prominently visible on focus |
 
 ## Local screenshots
 
