@@ -216,6 +216,18 @@ cut it.
   its place. An inline `<input type="search">` and a command-palette overlay
   are both real answers; which one follows the collision the same way
   navigation does, not a `Cmd+K` reflex.
+- **Comments are a product decision, not a design default.** Ask, and
+  default to no. A portfolio's audience is a hiring manager or a client
+  reading with intent, not a community, and a comment thread invites
+  off-topic engagement and spam that needs active, ongoing moderation — a
+  different, less predictable commitment than the newsletter's cadence or
+  the CV's occasional refresh. When the subject genuinely wants them — a
+  working blog with real technical discussion, an educator building a
+  following — build on GitHub Discussions (giscus), not a third-party
+  ad-supported service: real identity through GitHub auth fits a
+  portfolio's own evidence standard better than an anonymous comment box,
+  and the client script gets vendored before ship like any other library
+  (`§9`).
 
 ## Handing over the keys
 
