@@ -339,6 +339,13 @@ This section is `§3` enforced.
 - **The list is open.** Invent one, name it, describe it in the format above, and add
   it to the run. An invented style with a real name and stated mechanics beats the
   best-executed entry on this page, because nobody can pattern-match it.
+- **Know the current AI-default bundle and refuse it by name.** As of mid-2026:
+  Inter or a generic system font, a purple-to-indigo gradient hero on white,
+  everything center-aligned, and a 3–4 card icon grid — traced by Tailwind's own
+  creator to his `bg-indigo-500` default, and independently confirmed as
+  Anthropic's own AI design tool's fixed output regardless of who is using it.
+  This exact list dates fast; the discipline behind it — noticing the industry's
+  new reflex and refusing it — does not.
 
 ## Style and accessibility
 
