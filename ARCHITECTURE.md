@@ -115,7 +115,7 @@ Flat and readable. The URL is part of the design.
 /about                if it earns a page
 /writing              blog index
 /writing/<slug>       post
-/uses  /now           only if they actually want them
+/uses  /now  /changelog   only if they actually want them
 ```
 
 Rules: no `/index.html` in a public URL, trailing slashes consistent, slugs

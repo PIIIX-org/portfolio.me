@@ -135,6 +135,41 @@ verification subset ran, the deploy command, the new rollback reference, the dat
 run describes the original site. When verification was scoped, scope the grade to the
 changed surface and say so.
 
+## The public changelog
+
+Optional, and the cheapest of this pipeline's ask-first artifacts to
+justify: the source material already exists. Every re-run appends a dated
+entry to `REPORT.md`; a public changelog is a curated, human-facing slice
+of that same record. Nothing here asks the subject to write anything new.
+
+**What crosses over, and what never does.** A changelog entry says what
+changed and when — "Added the case study for a fintech client" — the same
+"what happened" a visitor would want from a project update. It never
+carries the operational half of `REPORT.md`: no rollback command, no
+deploy target, no verification scope, nothing describing how the site
+runs rather than what it says. A public artifact that leaks
+infrastructure detail is a `§9` problem, not a transparency win.
+
+**Anonymization survives the trip.** An entry about a case study that
+shipped under `§21`'s NDA handling follows the exact rule the case study
+itself follows — the class of client, never the name `loops/03-copy.md`
+withheld. A changelog is not a side door around a clearance the subject
+already gave carefully.
+
+**It's the one artifact here that doesn't rot.** Everything else the rot
+check above watches — the availability badge, the announcement bar, the
+`/now` page (`../ARCHITECTURE.md`) — is a present-tense claim that goes
+stale. A changelog entry is a historical fact, already true the day it's
+dated, and stays true forever. The only failure mode is silence: entries
+that stop appearing read the same as a stopped blog, evidence the site
+isn't maintained rather than proof that it is.
+
+**Where it lives follows the collision, not a reflex "Changelog" nav
+item.** A short list at the foot of `/now`, its own route, or folded into
+the blog index where one exists — whichever the site's own structure
+suggests. `../ARCHITECTURE.md`'s routing table lists it as one more route
+that exists only if the subject wants it.
+
 ## Skip cost
 
 Skipping this mode means treating an update as a fresh build: the design drifts because
