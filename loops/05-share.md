@@ -131,6 +131,32 @@ conformance target honestly, list what's actually still unresolved rather
 than claiming a clean bill, and date it so a visitor can judge how current
 the claim is.
 
+## The voice intro
+
+Optional, and a different kind of ask than the CV or the accessibility
+statement: those are utility and evidence, this one is exposure. Ask, and
+default to no — a voice clip means a stranger hears them before they've
+read a word, and not every subject wants that.
+
+When they do, it's `loops/01-substance.md`'s recorded-intake practice
+surfaced rather than kept internal: a real recording of them speaking,
+never a synthesized clone reading a script in their name — a cloned voice
+standing in for them is a fabrication in the same family `§5` already
+bans everywhere else. Reuse an actual moment from the interview if
+they're comfortable with it going public, or record a short, separate
+take if they'd rather keep the interview private and the site's clip
+distinct from it. Either way it is their unrehearsed voice, not a
+read-aloud pass over copy Loop 3 already wrote for the page.
+
+A few seconds to perhaps thirty — long enough to hear who they are,
+short enough that it never competes with the work `§7` says should be
+the hero. Placed beside identity, wherever the name and photo already
+live, not a standalone section of its own. Self-hosted per `§9`, native
+controls, no autoplay with sound, and a transcript alongside it exactly
+as `loops/04-build.md`'s video-and-audio section already requires for
+anything carrying information — the transcript is what makes the clip
+accessible rather than decorative.
+
 ## The conversion path
 
 **Coupled to the deploy target.** A static host cannot take a form POST without a
