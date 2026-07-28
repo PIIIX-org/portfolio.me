@@ -136,6 +136,25 @@ rather than reaching for a top bar by reflex. Whatever it is, it satisfies the
 non-negotiables — keyboard reachable, current page indicated, works at 360px, and
 present on every page including the deepest post.
 
+### The breadcrumb trail
+
+`loops/06-seo.md`'s `BreadcrumbList` schema is invisible — search engines read
+it, a visitor never sees one. Building the on-page version because the schema
+already exists gets the order backwards: the schema's job is to describe
+whatever navigation the page actually has, not the reverse.
+
+This pipeline's own routing table, above, is flat — one level between the
+home page and everything else. A visible trail on a page that's already one
+click from the top, with a nav that already indicates the current page,
+states nothing a visitor doesn't already know. Skip it there.
+
+It earns its place once real depth exists: a tag page sitting between the
+writing index and a post, a nested case-study series, anything where the nav
+alone stops answering "where am I." Then it's `Home / Writing / <tag> /
+<slug>`, real links except the last one, following the collision rather than
+the reflex chevron-separated gray-text row — and present on the page whether
+or not the schema is also there.
+
 ## What multi-page changes in each loop
 
 | Loop | Change |
