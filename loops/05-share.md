@@ -114,6 +114,23 @@ résumé link below has something durable to point at. On a re-run that updates
 a claim (`loops/09-rerun.md`), regenerate it in the same pass; a CV that quietly
 drifts out of sync with the site is its own kind of rot.
 
+## The accessibility statement
+
+Optional, and a different question from `§12` itself — `§12` is HARD and
+applies whether or not this page exists. The statement is a public, dated
+claim about conformance and known limitations, not a substitute for actual
+compliance.
+
+Ask, and default to no, for the same reason as the CV: most subjects don't
+need one, and a stale statement — a conformance claim nobody re-checked in
+two years — is worse than none, per `loops/09-rerun.md`'s rot check. It
+clearly earns its place when accessibility, UX research, or inclusive
+design is part of the subject's own expertise; there it is evidence
+(`§5`, `BRAND.md`'s proof ladder), not a courtesy page. State the
+conformance target honestly, list what's actually still unresolved rather
+than claiming a clean bill, and date it so a visitor can judge how current
+the claim is.
+
 ## The conversion path
 
 **Coupled to the deploy target.** A static host cannot take a form POST without a
