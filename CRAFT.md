@@ -240,6 +240,7 @@ elsewhere.
 | Lightbox navigation | Next/prev as real, independently-labeled buttons, not a bare arrow-key handler | ARIA's carousel pattern deliberately keeps navigation on labeled buttons rather than a custom keybinding, so any input method that can activate a button can advance the image |
 | In-page loading indicator | A spinner or a skeleton, chosen to match the collision — not settled by research, settled by style | For a wait inside an already-loaded page: search-as-you-type, a filtered list refreshing, an image swapping. Skip it entirely under roughly a second; an indicator that flashes for 200ms reads as a glitch, not a status |
 | Before/after comparison | A native `<input type="range">` driving `clip-path` on the "after" layer — free keyboard, touch, and assistive-tech support the platform already built | A redesign case study's most direct evidence. Both images are real project artifacts per `§5`, never a mockup |
+| Back-to-top | Returns the visitor to the top of a long page, appearing only past a scroll threshold and animating back out above it | The same length test [`ARCHITECTURE.md`](./ARCHITECTURE.md)'s table of contents already applies: earns its place on a long case study or blog post, absent on anything short enough to scroll back in one gesture. A bare circular arrow pinned to the corner is the reflex; the collision decides what this one actually looks like |
 
 ### Opening and closing a sheet
 
