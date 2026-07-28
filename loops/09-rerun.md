@@ -73,7 +73,7 @@ open issues, if any, before running the table by hand from scratch.
 | Every link | External ones first. They die quietly while the site keeps serving 200s |
 | TLS and redirects | Certificate expiry, `http` still redirecting, apex and `www` both resolving |
 | Third-party assets | A CDN reference `§9` should have prevented, or one a later hand-edit added |
-| Present-tense claims | "Currently at X" when they left in March. Present tense is a claim about today — an availability badge and an announcement bar are the same claim wearing UI (`CRAFT.md`) |
+| Present-tense claims | "Currently at X" when they left in March. Present tense is a claim about today — an availability badge and an announcement bar are the same claim wearing UI (`CRAFT.md`), and a `/now` page (`ARCHITECTURE.md`) is that claim occupying a whole route |
 | Contact path and details | Send a real message and confirm it arrives. Endpoints expire, handles change, the résumé link 404s |
 | Images | Confirm they load. An `<img>` tag is not an image |
 | Console | Zero errors. A browser release can break what shipped clean |

@@ -129,6 +129,36 @@ does not control — is a citation this run can break. Ask about this at intake
 [`loops/06-seo.md`](./loops/06-seo.md), where it belongs beside the sitemap
 and canonical work it protects.
 
+## The /now page
+
+The routing table says build it "only if they actually want them" and stops
+there. What goes on it, once they do:
+
+**A snapshot, not a bio and not a log.** `/about` is who they are;
+`/writing` is dated and append-only; `/now` is what they're focused on at
+the moment someone reads it — the current project, what they're heads-down
+on, what they're open to and what they're not. One short paragraph, not a
+running list of updates. A visitor rereading it a year later should see it
+changed, not grown.
+
+**The most rot-prone page in the site.** Every word on it is a present-tense
+claim, which makes it the availability badge's problem at page scale rather
+than one line's — `loops/09-rerun.md`'s rot check already treats "currently
+at X" as a claim about today, and this entire page is that claim. Date it
+visibly, at the top, in the copy itself rather than a buried `dateModified`
+meta tag a visitor never sees — the date is the thing that makes the page
+honest instead of a snapshot nobody can place in time.
+
+**Ask the same commitment question as the newsletter.** Not a moderation
+burden like comments, but an authorship one: someone has to actually come
+back and rewrite it every few months, or the date at the top turns into
+evidence against them. A subject who won't maintain it is better served by
+no `/now` page than a dated one nobody revisits.
+
+`/uses` doesn't carry the same risk — a tool list drifts slowly and a stale
+entry reads as dated trivia, not as a claim about the subject's present.
+It needs no equivalent doctrine here.
+
 ## Nav
 
 Multi-page needs real navigation, and `§3` applies: invent it for this subject
