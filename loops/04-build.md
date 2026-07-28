@@ -306,6 +306,27 @@ in the DOM from first paint, with content injected into it rather than the
 container itself appearing only once there is something to say — the same
 reasoning that keeps a live region announced reliably anywhere else in the site.
 
+## The focus ring
+
+`--p-state-focus` exists as a token and gets consumed everywhere
+`:focus-visible` applies, but nothing states what the ring itself actually
+looks like — only that it must (`§12`, HARD).
+
+A real, sourced minimum to build to: at least a 2px-thick perimeter around
+the unfocused element, and at least 3:1 contrast between the same pixels in
+the focused and unfocused states — not contrast against whatever sits next
+to it, contrast against itself before and after (WCAG 2.2's Focus Appearance
+criterion). `outline` with a positive `outline-offset` is the simplest way
+to clear both: the offset keeps the ring from disappearing into the
+element's own edge or background, and a 2–3px `outline-width` at the accent
+token clears the area test on anything but the smallest control.
+
+`:focus-visible`, never bare `:focus` — a mouse click should not draw the
+ring a keyboard user needs. The ring's shape follows the collision like
+every other visual decision here; a sharp, thick outline reads differently
+on a Swiss grid than a soft glow does inside liquid glass, and either is
+fine as long as the two numbers above hold.
+
 ## The skip link
 
 Every page needs one (`§12`), and how it looks is not settled by "it exists."
@@ -411,7 +432,7 @@ Run these before the loop closes:
 |---|---|
 | **Responsive** | 360, 768, 1440. Real device shapes, not arbitrary breakpoints. Nothing overflows, nothing collapses, type stays readable |
 | **Semantic** | One `h1`, headings in order, landmarks, lists that are lists, buttons that are buttons |
-| **Keyboard** | Tab through everything. Visible focus. No traps. Skip link works. Any overlay meets the modal contract above, focus included |
+| **Keyboard** | Tab through everything. Visible focus, meeting the focus-ring spec above. No traps. Skip link works. Any overlay meets the modal contract above, focus included |
 | **Budget** | Shell under 100KB and painting alone. Heavy layer deferred and gated. LCP under 1.5s |
 | **Cross-browser** | Chromium and WebKit at minimum. Safari breaks `backdrop-filter` and WebGL in ways Chrome does not |
 | **Copy** | Every string from `COPY.md`. No placeholder survived. Alt text on every image |
