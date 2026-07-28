@@ -125,6 +125,31 @@ channel carries the value, decided before a single pixel renders.
 | Perceptually-uniform color scales | Sequential scales built lightness-dominant, dark reading as more. Diverging scales mark their break with both hue and lightness together. Qualitative scales hold saturation and lightness near-constant and vary hue alone | ColorBrewer's construction grammar. A scale built this way survives greyscale and holds together for colorblind readers by construction. Caps near 7–9 classes before further division reads as noise |
 | No rainbow, ever | Jet and rainbow-family colormaps stay off the table regardless of the palette elsewhere on the page | A bright mid-range band reads as a false peak — measured brighter than the true data maximum by a wide margin. The distortion hits every reader, not only colorblind ones |
 | Table density | `font-variant-numeric: tabular-nums`, numeric columns right-aligned to approximate decimal alignment, hairline row dividers, `position: sticky` on the header | Any table on any style, not only Data-brutalist's dense aesthetic — a project's metrics, a pricing comparison, a work history. `STYLES.md` names this as Data-brutalist's whole look; every other style gets to use the same mechanics quietly |
+| Activity rhythm visualization | A calendar-style grid of small cells, one per unit of time, colored by how much real activity that unit contained | Sourced strictly from `EVIDENCE.md`'s dated entries — commits, shipped projects, published posts — never invented to fill a quiet stretch. Position carries the calendar structure, color layers the magnitude on top, built from the perceptually-uniform scale above rather than a fixed four-step swatch |
+
+**The literal reflex here is GitHub's own contribution graph** — flat green
+squares, four fixed steps, a hover tooltip with a count. Copying it
+verbatim is `STYLES.md`'s guardrails problem in miniature: recognizable at
+a glance as "the GitHub thing," not this subject's own visual language, no
+matter which site it appears on.
+
+What survives the reinvention is the information structure alone: position
+carries the calendar — week as one axis, day as the other, or whichever
+axis actually reads this subject's real rhythm — and color layers the
+magnitude on top, drawn from a perceptually-uniform scale built as above
+rather than a fixed step count, and never from the rainbow family this
+table already rules out on its own. Cell shape, palette, and which time
+unit the axis actually uses are reinvented like everything else `§3`
+covers — a square grid is GitHub's choice, not a law of the technique.
+
+**Every cell traces to `EVIDENCE.md`.** Whatever real, dated activity the
+run actually sourced, never invented to keep a quiet stretch from looking
+quiet. `§5` applies here exactly as it does to a stated number.
+
+**It earns its place only when the rhythm is genuinely something to be
+proud of.** A mostly-empty grid reads as evidence against the subject, not
+for them — the honest call, per `§7`'s test, is to leave it out rather than
+dress up a thin record in a chart.
 
 ### Motion and input
 
