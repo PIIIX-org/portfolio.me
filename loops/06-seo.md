@@ -196,7 +196,10 @@ search and answer engines read for eligibility and rich results:
   this is where the real action goes — the schema was never the problem, a
   fabricated one was.
 - **`BreadcrumbList`** on every page below the home page, for multi-page and
-  blog sites (`ARCHITECTURE.md`).
+  blog sites — the structured-data half only. Whether a visible trail
+  accompanies it is a separate decision, made in `ARCHITECTURE.md`'s Nav
+  section, and it does not always earn its place on this pipeline's flat
+  routing.
 - **`Article`** on every blog post: `headline`, `datePublished`,
   `dateModified`, `author` pointing at the `Person` object. Dates are real
   commit dates.
