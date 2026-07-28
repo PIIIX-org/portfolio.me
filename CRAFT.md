@@ -180,6 +180,52 @@ from Loop 3 is in place.
 
 ---
 
+## Component motion
+
+How the patterns nearly every run eventually needs — a panel, a collapse, an
+overlay, a confirmation — actually move, once `§12`'s three states are handled
+elsewhere.
+
+| Technique | What it is | Where it earns its place |
+|---|---|---|
+| Drawer and sheet motion | Slide on `transform` matched to the anchored edge, backdrop opacity in tandem | A draggable sheet drops the duration token for spring and inertia physics, so it responds to release velocity instead of animating on rails |
+| Accordion and disclosure height | `grid-template-rows: 0fr` to `1fr` on the wrapper, or `interpolate-size: allow-keywords` where supported | Real height animation with no `max-height` guess and no JS `scrollHeight` measurement. Native `<details>` gets `::details-content` instead of a hand-built accordion |
+| Modal entrance and exit | Scale and fade together, never one alone | Fade alone reads flat, scale alone reads like a bug. Motion character still comes from the archetype; the focus contract in [`loops/04-build.md`](./loops/04-build.md) governs regardless |
+| Toast and notification motion | Slide plus fade from one fixed stacking edge, never blocking, never trapping focus | The inverse contract from a modal. `aria-live="polite"` for routine confirmations, `role="alert"` only to interrupt |
+
+### Opening and closing a sheet
+
+Scroll-lock the body while it's open, or the page behind it creeps as someone
+scrolls the sheet itself.
+
+Open and close are allowed to run asymmetric. `--p-ease-entry` arriving,
+`--p-ease-in-out` — faster — leaving: a sheet that closes as slowly as it
+opened reads like it's resisting dismissal.
+
+A draggable sheet drops duration and easing tokens entirely for spring and
+inertia physics. A fast flick dismisses, a slow release rubber-bands back to
+its snap point. Multiple snap points — peek, half, full — are one spring
+settling at a different target each time, never three separate CSS
+transitions stapled together.
+
+### Sequencing multiple toasts
+
+One fixed stacking edge for the whole run, never chosen per toast.
+
+A new toast pushes the stack. An old one leaving animates the gap closed
+rather than letting the ones above it snap into place.
+
+The dismiss timer pauses on hover and on focus. A toast timing out while
+someone is mid-read or reaching for its action button is the exact failure
+this rule exists to prevent.
+
+The live region exists in the DOM from first paint, with content injected
+into it rather than the region itself arriving at toast time — some screen
+readers miss an `aria-live` region that shows up after the page has already
+loaded.
+
+---
+
 ## Prototype before you design around it
 
 This is the rule of Loop 2b. A technique is not available to the design until it

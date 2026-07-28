@@ -251,6 +251,10 @@ On close, focus returns to the element that opened it. Not the page top, not
 wherever the layout happens to land. If that element no longer exists, focus goes
 somewhere that keeps the workflow legible, never dropped to `<body>`.
 
+How it moves — the drawer, the sheet, the toast — is in
+[`CRAFT.md`](../CRAFT.md#component-motion). This section governs the contract;
+that one governs the motion.
+
 ## Forms
 
 The contact form is the one interactive component nearly every run ships, and
