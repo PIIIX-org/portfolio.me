@@ -105,6 +105,14 @@ technique that ships in the shell costs nothing against the heavy budget.
 | `text-wrap: balance` / `pretty` | Native line-break optimization | Headlines that break where a designer would break them. One declaration |
 | Scrollbar styling | `scrollbar-color`, `scrollbar-width`, `::-webkit-scrollbar*` | Consumes the token accent and surface, never the browser default gray. Match the style's character — thin and overlay for something quiet, thick and square for a terminal or data-brutalist run. Never `scrollbar-width: none` — hiding it removes an affordance, the same mistake as hiding a skip link with `display: none` |
 | `::selection` | Background and text color for highlighted text | The accent token, checked at the same ≥4.5:1 the rest of the page holds. The default browser blue is the tell that nobody thought about it |
+| `@media print` | Nav, motion, and interactive-only chrome hidden; forced light, high-contrast color regardless of which mode the page loaded in; link URLs printed after the link text | The live page, not the separate CV export — someone printing a case study to read offline or hand to someone in a room without a screen. Standard, not an ask; costs nothing to include |
+
+Print reuses assets already on hand rather than building new ones: the same
+no-WebGL fallback `§12` already requires stands in for anything canvas or
+WebGL drove on screen, since neither renders on paper regardless. `break-
+inside: avoid` on images and table rows, `break-after: avoid` on headings, so
+a page break never lands mid-figure or strands a heading at the bottom of a
+sheet with its content on the next one.
 
 ### Information design
 
