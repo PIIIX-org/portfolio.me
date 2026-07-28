@@ -234,6 +234,21 @@ designer's, and anyone whose work moves or makes noise.
 - **Weight is why video belongs in the heavy tier** (`§13`). `preload="none"`,
   poster in the shell, source swapped in on intersection or on click. A reel that
   starts downloading at page load has eaten the budget before anyone pressed play
+- **Controls stay native by default.** A full accessible rebuild — keyboard
+  seeking, a captions toggle, screen-reader state announcements — is exactly
+  what the browser already got right, and rebuilding it is where most custom
+  players get worse, not better. `accent-color` set to the token accent
+  tints the native scrubber and volume thumb where the browser supports it,
+  real brand integration for the cost of one declaration
+
+Fully custom chrome is for the run where the player itself is the work — a
+filmmaker, a sound designer, someone whose portfolio is fundamentally about
+how motion or audio gets controlled. Even then, the browser's own
+conventions carry over rather than getting reinvented: space plays and
+pauses, arrow keys seek and adjust volume, a real toggle button for
+captions that only appears when a track exists. A custom player that
+ignores these conventions asks a visitor to relearn something they already
+know.
 
 ### Live demos
 
