@@ -163,6 +163,17 @@ rule once — stroke weight, corner treatment, how a shadow falls, how many
 colors — state it in `DIRECTION.md`, and hold it across every mark the run
 draws, icon or scene alike.
 
+**The switch itself is a different question from how the two modes are
+designed.** "An inverted palette is a settings toggle" above is about not
+faking the second mode by inverting the first — it says nothing about
+whether a manual toggle control should exist. It should: detect
+`prefers-color-scheme` by default, and let a visitor override it, persisted
+so the choice survives a return visit ([`loops/04-build.md`](./loops/04-build.md)
+has the mechanism). What the control looks like follows the collision the
+same as everything else — an icon, a text label, a slider — never the reflex
+sun-and-moon icon pair unless that pair genuinely earns its place in this
+run's visual language.
+
 ### Typographic craft
 
 This group is unglamorous. It is also what separates good from expensive. Nobody
