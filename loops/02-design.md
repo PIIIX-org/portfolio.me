@@ -77,6 +77,12 @@ concept, it forces the collision to differ from what is already there
 
 ### Design images
 
+Before dispatching: one line per section on what it is doing compositionally —
+dense or sparse, text-led or image-led, where the eye lands first. This is the
+composition brief `section-designer` reads to vary from its neighbors, and it
+has to come from the conductor. A worker sees its own section and nothing on
+either side of it, so it cannot know what to differ from unless it is told.
+
 Dispatch `section-designer`, **one agent per section**. Each returns one horizontal
 image of that section.
 
