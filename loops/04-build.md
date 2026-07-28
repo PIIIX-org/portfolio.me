@@ -110,6 +110,15 @@ and blogs get one shell, not one per template ([`ARCHITECTURE.md`](../ARCHITECTU
 The light-mode overrides live in this file too. Two art directions per
 [`CRAFT.md`](../CRAFT.md) means two sets of color tokens, both conductor-owned.
 
+`:root` carries one mode by default, `@media (prefers-color-scheme: ...)`
+covers the visitor whose system says otherwise, and `:root[data-theme="dark"]`
+/ `:root[data-theme="light"]` win over both once someone picks a mode by
+hand — the toggle sets the attribute and writes it to `localStorage`, nothing
+more. Reading that value back happens in a small blocking script in `<head>`,
+before any CSS paints; setting it after first paint in a deferred script is
+the flash of the wrong theme that makes a dark-mode toggle look broken on the
+first frame.
+
 ### What else is shell-owned
 
 | Shell-owned | Off-limits because |
