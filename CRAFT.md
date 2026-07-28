@@ -242,6 +242,7 @@ elsewhere.
 | Before/after comparison | A native `<input type="range">` driving `clip-path` on the "after" layer — free keyboard, touch, and assistive-tech support the platform already built | A redesign case study's most direct evidence. Both images are real project artifacts per `§5`, never a mockup |
 | Back-to-top | Returns the visitor to the top of a long page, appearing only past a scroll threshold and animating back out above it | The same length test [`ARCHITECTURE.md`](./ARCHITECTURE.md)'s table of contents already applies: earns its place on a long case study or blog post, absent on anything short enough to scroll back in one gesture. A bare circular arrow pinned to the corner is the reflex; the collision decides what this one actually looks like |
 | Case-study presentation mode | A full-screen, one-beat-at-a-time walkthrough of the five-beat case study, morphing between beats with the View Transitions API already in the Motion and input group above | Earns its place on a case study meant to be presented live — walked through on a call, narrated in an interview — never as a default reading mode competing with the scrolling page it's drawn from |
+| Inline zoom-to-detail | A single embedded screenshot, clicked to see full resolution in place — no gallery, no next/prev | Distinct from lightbox navigation: one image inside running prose, not a set. Dismisses back to the exact point in the reading flow it was clicked from, never into a gallery experience that implies a series |
 
 ### Opening and closing a sheet
 
@@ -358,6 +359,32 @@ Focus management borrows the modal contract in
 walkthrough on entry, `Escape` or the labeled close control returns it to
 the button that opened it, and the underlying page is back at the scroll
 position it was left at — never reset to the top.
+
+### Zooming an inline screenshot
+
+The native `<dialog>` element, opened with `.showModal()` — the same
+platform-primitive instinct that already reuses `<details>` for the
+accordion and the range input for the comparison slider, applied here to
+an overlay for the first time. The browser supplies the focus trap,
+`Escape`-to-close, and a `::backdrop` for the scrim, none of it hand-built.
+
+The trigger is a real `<button>` wrapping the inline `<img>`, labeled with
+what it does — "View full resolution" — never a bare `onclick` on the image
+itself. Same principle the lightbox and presentation-mode entries above
+both apply: any input method that can activate a button can open it.
+
+The image morphs from its inline position to the enlarged, centered one
+via the View Transitions API, the third reuse of the same primitive in
+this file, so the visitor's eye carries the continuity from where they
+were reading to the detail they asked for rather than losing the thread
+to a hard cut. Closing returns focus to the button and leaves the scroll
+position exactly where it was, the same point the presentation mode above
+already makes for its own exit.
+
+No next, no previous, no counter reading "3 of 8." The moment a set of
+images needs paging between them, that is lightbox navigation, not this —
+this technique exists specifically for the single image that does not
+belong in a set.
 
 ---
 
