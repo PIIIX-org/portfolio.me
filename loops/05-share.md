@@ -132,6 +132,15 @@ Only if something is collected. A form means an EU visitor makes an imprint and 
 privacy line a legal requirement, not a preference. Skip entirely when nothing is
 collected — that is the common case and it needs no page.
 
+A privacy line and a cookie-consent banner are not the same requirement. The
+privacy line is informational — what's collected, why, where it goes — and a
+contact form alone earns one regardless of cookies. A consent banner is a
+heavier, interactive requirement that only applies once a non-essential cookie
+actually gets set, and following `loops/04-build.md`'s own analytics
+preference order (the host's own server-side analytics, or a cookieless tool)
+usually means one never does. Build the banner only when the subject insists
+on something that sets one — `loops/04-build.md` has the spec.
+
 The indexing decision, `robots.txt`, `sitemap.xml`, and structured data beyond
 `Person` belong to [`loops/06-seo.md`](./06-seo.md), which runs right after this
 one.

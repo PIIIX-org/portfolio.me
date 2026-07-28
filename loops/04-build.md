@@ -391,6 +391,18 @@ Anything that loads a script goes in the heavy tier (`§13`), after first paint,
 it triggers the privacy-notice requirement in [`05-share.md`](./05-share.md).
 Collecting anything is what turns that page from optional into required.
 
+If the subject insists on something from that list that sets a non-essential
+cookie — Google Analytics, or any embed that does the same — it needs a real
+consent banner, not a decorative one. The script that sets the cookie loads
+only after consent, never before with the banner as an afterthought sitting
+on top of an already-loaded tracker — that is the most common way this gets
+built, and it is not actually compliant. Accept and reject, not a wall of
+category toggles; a personal site's footprint is small enough that granular
+consent is over-engineering. The choice persists in one cookie of its own,
+the exception the requirement carries for remembering it was answered.
+Visual treatment follows the collision like every other component here,
+never a generic gray bar pinned to the bottom of the screen.
+
 ## Quality passes
 
 Run these before the loop closes:
