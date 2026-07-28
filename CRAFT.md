@@ -103,6 +103,8 @@ technique that ships in the shell costs nothing against the heavy budget.
 | Houdini paint worklets | Custom paint in a background image | Procedural texture inside CSS layout. Support is narrow, so always with a static fallback |
 | Conic / repeating gradients | Gradient functions used as pattern | Texture and moire at zero cost. Halftones, guilloche, radial rhythm |
 | `text-wrap: balance` / `pretty` | Native line-break optimization | Headlines that break where a designer would break them. One declaration |
+| Scrollbar styling | `scrollbar-color`, `scrollbar-width`, `::-webkit-scrollbar*` | Consumes the token accent and surface, never the browser default gray. Match the style's character — thin and overlay for something quiet, thick and square for a terminal or data-brutalist run. Never `scrollbar-width: none` — hiding it removes an affordance, the same mistake as hiding a skip link with `display: none` |
+| `::selection` | Background and text color for highlighted text | The accent token, checked at the same ≥4.5:1 the rest of the page holds. The default browser blue is the tell that nobody thought about it |
 
 ### Information design
 
