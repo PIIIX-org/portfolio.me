@@ -241,6 +241,7 @@ elsewhere.
 | In-page loading indicator | A spinner or a skeleton, chosen to match the collision — not settled by research, settled by style | For a wait inside an already-loaded page: search-as-you-type, a filtered list refreshing, an image swapping. Skip it entirely under roughly a second; an indicator that flashes for 200ms reads as a glitch, not a status |
 | Before/after comparison | A native `<input type="range">` driving `clip-path` on the "after" layer — free keyboard, touch, and assistive-tech support the platform already built | A redesign case study's most direct evidence. Both images are real project artifacts per `§5`, never a mockup |
 | Back-to-top | Returns the visitor to the top of a long page, appearing only past a scroll threshold and animating back out above it | The same length test [`ARCHITECTURE.md`](./ARCHITECTURE.md)'s table of contents already applies: earns its place on a long case study or blog post, absent on anything short enough to scroll back in one gesture. A bare circular arrow pinned to the corner is the reflex; the collision decides what this one actually looks like |
+| Case-study presentation mode | A full-screen, one-beat-at-a-time walkthrough of the five-beat case study, morphing between beats with the View Transitions API already in the Motion and input group above | Earns its place on a case study meant to be presented live — walked through on a call, narrated in an interview — never as a default reading mode competing with the scrolling page it's drawn from |
 
 ### Opening and closing a sheet
 
@@ -333,6 +334,30 @@ Alt text on both images describes what each one shows, same as any other
 image (`§12`), and the comparison is not the only place that claim exists —
 the case study's own prose says what changed and why, so the insight
 survives for a reader who cannot see or operate the slider.
+
+### Presenting a case study full-screen
+
+Started from a real, labeled control — "Present," never an icon alone — with
+a keyboard shortcut wired on top as an accelerator. A bare keyboard trigger
+with no visible entry point is the exact mistake the lightbox section
+already corrects: any input method that can activate a button can start the
+walkthrough, and one that only a keyboard shortcut can reach cannot.
+
+No new copy. It stages `COPY.md`'s existing five beats — problem,
+constraint, decision, what broke, outcome — one at a time, full viewport;
+`§3` and `§7` govern how the staging is invented for this subject, never
+whether a second script gets written for the same case study.
+
+The beat-to-beat morph is the same View Transitions API already in the
+Motion and input table, same-document rather than cross-document this
+time. `prefers-reduced-motion` gets an instant cut between beats instead of
+the morph, the same three-state rule as every other technique here.
+
+Focus management borrows the modal contract in
+[`loops/04-build.md`](./loops/04-build.md): focus moves into the
+walkthrough on entry, `Escape` or the labeled close control returns it to
+the button that opened it, and the underlying page is back at the scroll
+position it was left at — never reset to the top.
 
 ---
 
