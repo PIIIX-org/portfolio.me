@@ -150,7 +150,15 @@ ceiling for everything else.
 | Sound design | Considered audio on interaction and ambience | Opt-in, never autoplay, always with a visible mute. When it fits, nobody else did it |
 | Procedural texture synthesis | Surface generated rather than downloaded | Grain, paper, fabric, and noise at zero request cost, tuned exactly to the palette |
 | Generated-then-treated imagery | Image tool output run through in-browser treatment | `§10`. Duotone, displacement, dithering, or grain applied in the browser. Raw output never reaches the page |
+| Generated illustration | One consistent line weight, palette, and construction logic applied to every drawn mark | The counterpart to generated-then-treated imagery for a subject where photorealism is wrong. Also how a signature icon gets made when a library glyph would not carry the identity, per `§10` |
 | The absence states | The 404, the empty blog index, the failed contact submission — pages nobody plans to design | The single likeliest place a visitor meets the generic template underneath everything, because it is the page nobody thought to design. Built from the same collision and concept as the rest of the site, never a framework default |
+
+**One drawn thing and five drawn things need the same hand.** A single
+illustrated icon reads as intentional. Five illustrated icons in five different
+stroke weights read as clip art assembled under deadline. Pick the construction
+rule once — stroke weight, corner treatment, how a shadow falls, how many
+colors — state it in `DIRECTION.md`, and hold it across every mark the run
+draws, icon or scene alike.
 
 ### Typographic craft
 
