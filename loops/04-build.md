@@ -336,6 +336,7 @@ Run these before the loop closes:
 | **Copy** | Every string from `COPY.md`. No placeholder survived. Alt text on every image |
 | **Reduced motion** | Toggle the OS setting and look at it. It should still be a designed page |
 | **Console** | Zero errors, zero 404s |
+| **Absence states** | 404, empty blog index if there's one, and the failed-submission state are all built to the concept — none left as a framework default |
 
 ## Local screenshots
 
