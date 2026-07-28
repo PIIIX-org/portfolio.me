@@ -251,6 +251,48 @@ On close, focus returns to the element that opened it. Not the page top, not
 wherever the layout happens to land. If that element no longer exists, focus goes
 somewhere that keeps the workflow legible, never dropped to `<body>`.
 
+## Forms
+
+The contact form is the one interactive component nearly every run ships, and
+every `deploy/*.md` adapter already covers how the submission reaches somewhere.
+This is the half that was missing: what it looks like while someone fills it out,
+and what they see after.
+
+**Field states consume the token file, never invent one.** `--p-state-focus`,
+`--p-state-error`, and `--p-state-success` already exist in `tokens.css` — a form
+built without them is duplicating a color decision the shell already made.
+
+**Validate on blur, after the field's first interaction.** Not on every keystroke,
+which punishes someone mid-type for a field they have not finished. Not only on
+submit, which dumps every error at once on someone who filled the form in order.
+Blur-after-first-touch catches a mistake close to where it happened.
+
+**Mark required fields with more than color.** An asterisk, a "required" label —
+`§12`'s non-color-encoding rule applies here exactly as it does to a chart.
+
+**The submit button gets a designed in-flight state.** Disabled, not merely
+dimmed, the moment the request goes out. A button still clickable mid-request is
+how a slow connection produces two submissions.
+
+**Confirm success the way the rest of the site confirms anything.** A toast or an
+inline message, not a redirect to a separate thank-you page — a redirect costs a
+page load a personal site does not need and breaks the one continuous surface
+everything else on the page maintains.
+
+**The failure state is the one `CRAFT.md`'s absence-states entry already named
+and left unspecified.** A validation failure is per-field, inline, and does not
+block the fields that were already filled in correctly. A submission failure —
+the network dropped, the server errored — is a form-level message, distinct from
+any single field, and it says what to do next: try again, or the fallback contact
+method, rather than only that something went wrong.
+
+**Accessibility, per `§12`:** a real `<label>` on every field, never a
+placeholder standing in for one. `aria-describedby` linking the error text to its
+field. `aria-invalid` toggled with the state. The error-summary container exists
+in the DOM from first paint, with content injected into it rather than the
+container itself appearing only once there is something to say — the same
+reasoning that keeps a live region announced reliably anywhere else in the site.
+
 ## The three states, per section
 
 Non-negotiable (`§12`). Each section ships:
