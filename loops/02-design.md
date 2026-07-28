@@ -58,7 +58,10 @@ Generate **2–3 distinct concepts** (`§4`). Each states:
   card layout places each project's attributes in a different spot from the next,
   so a reader comparing them scans back and forth hunting for what moved. A vertical
   list, a table, or a filmstrip holds a predictable position from item to item and
-  is the more honest default whenever the projects genuinely are comparable.
+  is the more honest default whenever the projects genuinely are comparable. Some
+  projects earn more room than others — [`loops/03-copy.md`](./03-copy.md)'s
+  micro-case-study tier — and whatever layout gets invented has to hold a taller
+  entry without breaking the pattern that makes the rest scannable.
 - How **navigation** works
 - **What happens when something's missing or wrong** — the 404, a failed contact
   submission, an empty blog index if there's one, no results for a search if
