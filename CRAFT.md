@@ -466,6 +466,7 @@ Free rein while prototyping. Pull any of these from a CDN and move fast.
 | curtains.js | DOM elements mapped to WebGL planes with shaders | ~60KB |
 | PixiJS | Fast 2D WebGL renderer. Particles, filters, sprites | ~400KB |
 | TSL / three-shader-language | Node-based shaders authored in JS, compiles to WebGL and WebGPU | Part of three.js |
+| Pagefind | Static-site search: indexes the built HTML at build time, ships a small WASM search runtime, no backend and no third-party service | ~100KB WASM runtime, plus a generated index that scales with content. Loaded lazily on first search interaction, never in the LCP path |
 | Lucide | Open-source icon set, 1,500+ glyphs on a consistent grid, tree-shakable | ~1KB per icon |
 | AnimateUI | Lucide icons pre-built with Motion enter/exit and interaction states | ~2KB per icon, on top of Motion |
 

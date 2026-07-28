@@ -209,6 +209,13 @@ cut it.
   legal minimum already requires once something is collected. Someone who
   writes three posts a year and says so honestly does not want that pressure
   on every page.
+- **Search, past a real threshold.** Not worth it below a modest archive —
+  tags and pagination already cover browsing a dozen posts. Once the archive
+  is deep enough that a visitor might not remember which post had the thing
+  they're after, a self-hosted, build-time search index (`CRAFT.md`) earns
+  its place. An inline `<input type="search">` and a command-palette overlay
+  are both real answers; which one follows the collision the same way
+  navigation does, not a `Cmd+K` reflex.
 
 ## Handing over the keys
 
