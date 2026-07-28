@@ -175,7 +175,35 @@ worse than a `mailto:` — it fails silently and nobody knows.
 
 **The ask matches the audience.** A hiring manager gets `/cv.pdf` and an email, if
 the CV above was built. A client gets a scoped inquiry. An investor gets a
-calendar link. One clear action, derived from the decision named in `BRIEF.md`.
+calendar link, below. One clear action, derived from the decision named in
+`BRIEF.md`.
+
+## The booking calendar
+
+Optional, ask-first, the same pattern as the CV and the newsletter: most
+subjects don't want their calendar exposed to a stranger, and the ones who
+do are usually the audience the conversion path above already names — an
+investor, a consulting client, anyone whose actual next step is booking
+time rather than sending an email.
+
+**Self-hosted preferred, per `§9`.** Cal.com self-hosted over an embedded
+Calendly — the same instinct already governing fonts and libraries applies
+to a scheduling tool: an embedded third party's iframe ships its own
+script and, with Calendly specifically, its own tracking the moment it
+renders, exactly what `scripts/preflight.py`'s tracker check exists to
+catch. Self-hosting keeps the booking data with the subject rather than a
+vendor, and it's a small enough service that a subject already comfortable
+self-hosting their own site can usually run it too.
+
+**The embed is the fallback, not the default** — the same escape valve
+already used for video and audio: when self-hosting genuinely isn't
+feasible, a privacy-respecting embed is the honest fallback, and which one
+ran gets said in the run report exactly as it does there.
+
+**One clear ask, not a page of its own.** It lives where the conversion
+path above already puts the calendar link, beside the contact ask matched
+to the audience, never a dedicated route competing with the actual work
+for attention.
 
 ## Legal minimum
 
