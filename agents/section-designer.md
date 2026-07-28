@@ -28,7 +28,9 @@ Follow `loops/02-design.md`:
    neighboring sections are doing. Vary from them. Left-text-right-image on every
    board is the template this pipeline exists to avoid. Reach for asymmetry,
    full-bleed, edge-anchored, split-scroll, oversized type as the image, a section
-   with almost nothing in it.
+   with almost nothing in it. Run any grid deviation through the three-part test
+   in `loops/02-design.md` — name the rule, state the reason, confirm the rest of
+   the layout still holds it — or keep it on the grid.
 
 4. **Serve the collision.** The collision sentence in `DIRECTION.md` names which
    parent carries structure and which carries surface. Your image has to make both
