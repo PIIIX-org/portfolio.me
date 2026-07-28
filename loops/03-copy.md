@@ -121,8 +121,9 @@ The hero line, and the sub-line if the design has one. Section headers. Project
 blurbs. The about, in first person unless the archetype says otherwise. Alt text on
 every image — descriptive, per `§12`, written now rather than improvised during the
 build. The contact ask. The footer. Meta title and description for Loop 5. Error and
-empty states — the 404, a failed submission, an empty blog index if there's one.
-`CRAFT.md`'s absence-states entry covers why these aren't an afterthought.
+empty states — the 404, a failed submission, an empty blog index if there's
+one, no results for a search if there's one. `CRAFT.md`'s absence-states
+entry covers why these aren't an afterthought.
 
 ## Testimonials
 
