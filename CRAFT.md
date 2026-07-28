@@ -227,6 +227,7 @@ elsewhere.
 | Toast and notification motion | Slide plus fade from one fixed stacking edge, never blocking, never trapping focus | The inverse contract from a modal. `aria-live="polite"` for routine confirmations, `role="alert"` only to interrupt |
 | Lightbox navigation | Next/prev as real, independently-labeled buttons, not a bare arrow-key handler | ARIA's carousel pattern deliberately keeps navigation on labeled buttons rather than a custom keybinding, so any input method that can activate a button can advance the image |
 | In-page loading indicator | A spinner or a skeleton, chosen to match the collision — not settled by research, settled by style | For a wait inside an already-loaded page: search-as-you-type, a filtered list refreshing, an image swapping. Skip it entirely under roughly a second; an indicator that flashes for 200ms reads as a glitch, not a status |
+| Before/after comparison | A native `<input type="range">` driving `clip-path` on the "after" layer — free keyboard, touch, and assistive-tech support the platform already built | A redesign case study's most direct evidence. Both images are real project artifacts per `§5`, never a mockup |
 
 ### Opening and closing a sheet
 
@@ -299,6 +300,26 @@ A live filter or search-as-you-type debounces before it fires. Roughly
 150–300ms after the last keystroke is the conventional range: long enough
 that a fast typist never triggers a fetch mid-word, short enough that the
 result still feels immediate once they pause.
+
+### Comparing before and after
+
+The range input is the interactive surface, not a custom pointer handler
+built to look like one. Its value drives a `clip-path: inset()` on the
+"after" image stacked over the "before" image, and the browser's own slider
+semantics carry keyboard operation, touch dragging, and screen-reader
+announcement for free. Style the track and thumb to the collision; the
+underlying `<input>` never disappears, `opacity: 0` layered under the custom
+handle it drives.
+
+The reveal tracks the input directly, one to one, with no easing and no
+inertia. A comparison tool answers "what changed here," and a lag between
+the drag and the reveal makes that answer feel imprecise. Motion belongs to
+things settling into a state; this is a value being read.
+
+Alt text on both images describes what each one shows, same as any other
+image (`§12`), and the comparison is not the only place that claim exists —
+the case study's own prose says what changed and why, so the insight
+survives for a reader who cannot see or operate the slider.
 
 ---
 
