@@ -205,7 +205,11 @@ vendoring it, not after a missing-glyph box turns up in review.
 **A language switcher, if `ARCHITECTURE.md` called for one**, is shell-owned
 like nav — present on every page, keyboard-reachable, and it switches the
 whole page's `dir` and font stack along with the content, never text alone
-while the layout stays mirrored wrong.
+while the layout stays mirrored wrong. Its visual form follows the collision
+the same way the dark-mode toggle's does — a dropdown, an inline text pair,
+whatever fits — never a flag icon: a flag represents a country, not a
+language, and the mismatch (Portuguese in Brazil and Portugal, French in
+Quebec and France) is exactly the kind of error a reflex choice invites.
 
 **Test the mirror.** An RTL page is not an LTR page with text flowing backward
 — icons that imply direction (an arrow, a chevron) mirror with it, and ones
