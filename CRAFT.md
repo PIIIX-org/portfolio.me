@@ -61,6 +61,46 @@ The heavy layer. All of it is tier two under `§13`, none of it in the LCP path.
 | Volumetric / god rays | Light scattering through a participating medium | Atmosphere and depth. Turns a flat scene into a space with air in it |
 | Procedural terrain / noise geometry | Mesh displaced by noise fields | Landscape, topography, mapped data as physical relief |
 
+### A fresh seed per page load
+
+Several rows above are seeded by construction — Voronoi's seed points,
+fbm's noise, cellular automata's initial state — which makes a fresh
+random seed on every page load a small change with a large effect: the
+same hero, a different instance of it, every visit. The bigger creative
+swing in this batch, and the one with the most honest tradeoffs to state
+up front.
+
+**It inherits `§13`'s tier split, and that constrains which techniques
+qualify.** The heavy layer is already lazy-loaded after first paint, gated
+on intersection, never in the LCP path — so a per-load seed on a tier-two
+technique adds no new layout risk beyond what the budget already requires:
+a reserved space and a designed poster shown before the heavy layer boots.
+The honest tradeoff is that the poster can no longer be a snapshot of "the"
+pattern, because there is no longer one single pattern — it has to read
+generically enough to hold for any seed, or be computed cheaply enough
+itself (CSS or SVG, shell-tier) to vary with the same seed before the
+heavy layer takes over. A hero technique that has to render at first paint
+to work at all does not qualify for this treatment; it stays a single,
+fixed asset.
+
+**Determinism is the second tradeoff, and it cuts against reproducibility
+by design.** A visitor cannot see the exact hero a screenshot or an OG
+image showed them, because each of those froze one arbitrary seed and the
+live page draws a new one every time. State this plainly in `DIRECTION.md`
+rather than letting it surface later as a reported bug: the share unfurl
+is honestly a sample, not a preview. Expose the seed itself in a URL query
+parameter, so one specific instance can be linked, bookmarked, or handed
+back in a bug report — the one place determinism is worth buying back
+cheaply.
+
+**Verification changes shape too.** `site-verifier` cannot diff one golden
+screenshot against a moving target. What it checks instead: frame rate and
+console cleanliness hold across several loads with different seeds, no
+seed produces a value the shader or generator cannot handle — the classic
+seeded-random bug is the seed nobody tried — and the reduced-motion and
+no-WebGL states already required of every technique render correctly for
+any seed, not only the one that happened to get prototyped.
+
 ### Post-processing and treatment
 
 The pass after the render. Cheap relative to what they buy, and where `§10` gets
