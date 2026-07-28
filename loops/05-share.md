@@ -64,6 +64,14 @@ visual language. One template, N images, no manual work per post.
 A blog also ships an RSS feed and a sitemap. The feed is the first thing writers ask
 for and it costs nothing. Drafts appear in neither.
 
+A feed that only exists as a `<link rel="alternate">` tag is invisible to
+almost everyone who isn't already using a reader. A real, visible link
+somewhere in the page chrome — the footer is the conventional place — makes
+it findable by a human, not only a browser extension. The feed icon is a
+platform-logo case, not a brand-carrying one, per `CRAFT.md`'s icon split:
+pull it from the same icon set the rest of the page's functional icons
+come from, recolored to the accent token, never regenerated from scratch.
+
 ## Structured data
 
 `Person` schema as JSON-LD: name, `jobTitle`, `url`, `sameAs` for their real
