@@ -33,6 +33,31 @@ Five beats. Dispatch `case-study-writer`, **one agent per project**.
 Depth comes from the audience in `BRIEF.md`. A hiring manager skims and wants the
 decision. A collaborator reads and wants what broke. Write for the one named.
 
+## The micro-case-study
+
+Not every project clears the bar for the full five-beat treatment, and not
+every project belongs in the grid as a bare title either. A smaller
+engagement, a side project, a week-long sprint — genuinely worth more than
+one line, honestly short of what a whole page earns.
+
+**The shape compresses, not just shortens.** Two or three sentences: what it
+was, and the one decision or outcome actually worth a reader's few seconds.
+Constraint and "what broke" need room a shorter piece doesn't have — drop
+them rather than write thin versions of all five beats. `§5` still applies
+undiminished: less content is not a softer sourcing bar.
+
+**No dedicated URL.** `ARCHITECTURE.md`'s own argument for why a case study
+gets a route — a hiring manager sending just that link — is exactly the bar
+this tier doesn't clear. A micro-case-study lives inline in the project grid
+or list itself, reading longer than its neighbors rather than promoted to a
+page for work that was never going to be cited alone.
+
+**The gate is `§7`'s same question at a smaller size.** Name the one thing
+this project's few sentences make the reader understand. An answer earns
+the micro treatment; no answer means the one-line grid caption was already
+the honest, sufficient version. Projects don't all need to grow just
+because the format now exists.
+
 ## Writing around an NDA
 
 The five beats ask for what broke and a sourced outcome, and for most senior people
