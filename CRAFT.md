@@ -218,6 +218,7 @@ elsewhere.
 | Modal entrance and exit | Scale and fade together, never one alone | Fade alone reads flat, scale alone reads like a bug. Motion character still comes from the archetype; the focus contract in [`loops/04-build.md`](./loops/04-build.md) governs regardless |
 | Toast and notification motion | Slide plus fade from one fixed stacking edge, never blocking, never trapping focus | The inverse contract from a modal. `aria-live="polite"` for routine confirmations, `role="alert"` only to interrupt |
 | Lightbox navigation | Next/prev as real, independently-labeled buttons, not a bare arrow-key handler | ARIA's carousel pattern deliberately keeps navigation on labeled buttons rather than a custom keybinding, so any input method that can activate a button can advance the image |
+| In-page loading indicator | A spinner or a skeleton, chosen to match the collision — not settled by research, settled by style | For a wait inside an already-loaded page: search-as-you-type, a filtered list refreshing, an image swapping. Skip it entirely under roughly a second; an indicator that flashes for 200ms reads as a glitch, not a status |
 
 ### Opening and closing a sheet
 
@@ -267,6 +268,29 @@ Preload the adjacent image the moment the current one is showing, so the
 common case of clicking next never shows a loading state at all. What a
 lightbox does when the network is slow enough that preloading loses the race
 is the same open question as loading states generally — not solved here.
+
+### An in-page wait
+
+Nielsen Norman Group's own recommendation, paraphrased here rather than
+quoted since their exact wording is not something this file can verify:
+skip an indicator entirely under about a second — it will flash and read as
+a glitch rather than a status. Between roughly two and ten seconds, show
+something. Past ten, a real progress indicator rather than an indefinite
+spin.
+
+Between two and ten seconds, this file does not pick spinner over skeleton
+or the reverse, because the research does not. One controlled study found
+skeleton screens performed the worst of three conditions tested against a
+plain spinner; a separate peer-reviewed study found the opposite point
+estimate; neither reached statistical significance. Choose whichever fits
+the collision the same way every other component here does — never on a
+claim about which one reads as more "human," which is not a finding either
+study supports.
+
+A live filter or search-as-you-type debounces before it fires. Roughly
+150–300ms after the last keystroke is the conventional range: long enough
+that a fast typist never triggers a fetch mid-word, short enough that the
+result still feels immediate once they pause.
 
 ---
 
