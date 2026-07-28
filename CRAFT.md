@@ -194,6 +194,7 @@ elsewhere.
 | Accordion and disclosure height | `grid-template-rows: 0fr` to `1fr` on the wrapper, or `interpolate-size: allow-keywords` where supported | Real height animation with no `max-height` guess and no JS `scrollHeight` measurement. Native `<details>` gets `::details-content` instead of a hand-built accordion |
 | Modal entrance and exit | Scale and fade together, never one alone | Fade alone reads flat, scale alone reads like a bug. Motion character still comes from the archetype; the focus contract in [`loops/04-build.md`](./loops/04-build.md) governs regardless |
 | Toast and notification motion | Slide plus fade from one fixed stacking edge, never blocking, never trapping focus | The inverse contract from a modal. `aria-live="polite"` for routine confirmations, `role="alert"` only to interrupt |
+| Lightbox navigation | Next/prev as real, independently-labeled buttons, not a bare arrow-key handler | ARIA's carousel pattern deliberately keeps navigation on labeled buttons rather than a custom keybinding, so any input method that can activate a button can advance the image |
 
 ### Opening and closing a sheet
 
@@ -225,6 +226,24 @@ The live region exists in the DOM from first paint, with content injected
 into it rather than the region itself arriving at toast time — some screen
 readers miss an `aria-live` region that shows up after the page has already
 loaded.
+
+### Navigating a lightbox
+
+Next and previous are real buttons, each with its own accessible label —
+"Next image," never a bare chevron with no name — using the button element's
+own keyboard semantics. ARIA's carousel pattern is explicit about this: it
+does not prescribe arrow keys for advancing, and activating next or previous
+should not move focus, so a visitor can repeat the action as many times as
+they want without re-finding it in the tab order. Wiring the arrow keys on
+top as a convenience is fine. The buttons are the part that has to work
+regardless.
+
+`Escape` closes the lightbox, the same as any dismissible overlay.
+
+Preload the adjacent image the moment the current one is showing, so the
+common case of clicking next never shows a loading state at all. What a
+lightbox does when the network is slow enough that preloading loses the race
+is the same open question as loading states generally — not solved here.
 
 ---
 
