@@ -72,7 +72,10 @@ profiles, `knowsAbout`. Every field sourced from `EVIDENCE.md` (`§5`).
 ## Favicons
 
 SVG favicon, 180px apple-touch-icon, `manifest.json` with theme color. Derived from
-the site's visual language, not a letter in a circle by reflex.
+the site's visual language, not a letter in a circle by reflex — usually the
+smallest legible fragment of the wordmark, or the accent shape reduced to its
+plainest silhouette. Test it at 16px, where the browser tab actually renders it;
+anything that only reads at favicon-preview size is not a favicon.
 
 ## The CV
 
