@@ -156,6 +156,10 @@ sentence than either. Trim for length with an ellipsis and keep the words as spo
 This is the most tempting fabrication in a portfolio and the most damaging, because
 the person quoted can be shown it later.
 
+How the words themselves get set — attribution typography, the quote mark — is in
+`CRAFT.md`. This section governs what gets said and by whom; that one governs how
+it looks on the page.
+
 ## The evidence check
 
 Before this loop closes, walk every factual claim in `COPY.md` against

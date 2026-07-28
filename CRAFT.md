@@ -179,6 +179,17 @@ from Loop 3 is in place.
 | Baseline grid | A shared vertical rhythm across all type | Sections that feel composed rather than stacked. Enforced with a spacing scale, verified with an overlay |
 | Fluid type with `clamp()` | Type scaling continuously between bounds | One scale that works from 320px to 2560px. Set a real ratio, not arbitrary numbers |
 | Hyphenation and justification | `hyphens`, `hyphenate-limit-chars`, language attributes | Justified text without rivers. Requires `lang` set correctly, which `§17` requires anyway |
+| Testimonial attribution | Name and role set distinctly from the quote itself — a different weight, size, or family register | The credibility signal is often the role as much as the name; give both room rather than shrinking one to fit |
+
+**The giant decorative quote mark is a reflex, not a decision.** An oversized
+stylized `"` floating beside the text is one of the most common testimonial
+patterns on the web, and it competes with the words for the attention `§7`
+says the work should have. Real typographic quotes — the `quotes` CSS
+property, a genuine `<blockquote>`/`<q>` — do the job invisibly. Where the
+quote lives is already decided: `loops/03-copy.md` says beside the claim it
+corroborates, and how that renders follows the collision already chosen —
+marginalia for an Editorial/print run, a plain inline break for anything
+quieter.
 
 ---
 
