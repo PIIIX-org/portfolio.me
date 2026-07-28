@@ -150,6 +150,7 @@ ceiling for everything else.
 | Sound design | Considered audio on interaction and ambience | Opt-in, never autoplay, always with a visible mute. When it fits, nobody else did it |
 | Procedural texture synthesis | Surface generated rather than downloaded | Grain, paper, fabric, and noise at zero request cost, tuned exactly to the palette |
 | Generated-then-treated imagery | Image tool output run through in-browser treatment | `§10`. Duotone, displacement, dithering, or grain applied in the browser. Raw output never reaches the page |
+| The absence states | The 404, the empty blog index, the failed contact submission — pages nobody plans to design | The single likeliest place a visitor meets the generic template underneath everything, because it is the page nobody thought to design. Built from the same collision and concept as the rest of the site, never a framework default |
 
 ### Typographic craft
 

@@ -60,6 +60,9 @@ Generate **2–3 distinct concepts** (`§4`). Each states:
   list, a table, or a filmstrip holds a predictable position from item to item and
   is the more honest default whenever the projects genuinely are comparable.
 - How **navigation** works
+- **What happens when something's missing or wrong** — the 404, a failed contact
+  submission, an empty blog index if there's one. Same concept as everything else,
+  not a generic fallback (`CRAFT.md`)
 - The **section list** and order, derived from the audience's decision
 
 Run the category-reflex check on each: if it's guessable from "portfolio for a
