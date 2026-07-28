@@ -168,9 +168,47 @@ visual language (`§10`). One template, N images, no manual work per post.
 - **Drafts** that do not publish, and do not leak into RSS or the sitemap
 - **Code blocks** with real syntax highlighting done at build time, not a runtime
   highlighter in the `§13` budget
-- **Tags** only if there are enough posts to need them. Three posts do not need taxonomy
+- **Tags** only if there are enough posts to need them. Three posts do not need
+  taxonomy. Once they do: a tag page per tag, listed the same way as the main
+  index rather than a separate visual language, and the tag itself a real link
+  on every post that carries it, not a static label
+- **Pagination once the index needs it.** A dozen posts on one page is fine;
+  fifty is not. Page it, or paginate by year, whichever the volume and the
+  audience's browsing habit suggest — never infinite scroll on a page whose
+  whole point is that a reader might want to cite one entry
+- **Related posts, past the same threshold as tags.** Three posts have nothing
+  to relate to each other. Once there is a real body of writing, link by tag or
+  by explicit editorial choice, never a naive "most recent 3" that just
+  restates the index
 - **A written post is evidence.** It goes in `EVIDENCE.md` like anything else, and it
   is often the strongest proof a thin portfolio has (`BRAND.md`)
+
+## The extras, and which ones earn their place
+
+Not every publication feature is worth building by reflex. Apply the same
+judgment `§7` already asks of a technique: name what it does for the reader, or
+cut it.
+
+- **Table of contents, for a post long enough to need one.** Generated from
+  real headings, never hand-maintained. A post short enough to finish in one
+  sitting does not need one — it adds navigation to something the reader was
+  about to finish reading anyway.
+- **Reading progress bar: default no.** It answers a question almost nobody was
+  asking, and it is one more thing competing with the words for attention on a
+  page whose entire job is the words. Build one only if the subject
+  specifically wants it and can say why.
+- **Social share: a native share action, never a row of platform icons.**
+  `navigator.share()` where supported, a plain copy-link button as the
+  fallback. A row of Twitter/LinkedIn/Facebook icons is a pattern that ages
+  badly, adds visual noise to every post, and for most of those platforms loads
+  a tracking script the moment the icon renders — the exact thing `§9` exists
+  to prevent.
+- **Newsletter signup is a product decision, not a design default.** Ask, the
+  same as the CV (`loops/05-share.md`). It commits the subject to an email
+  service, an ongoing cadence, and the privacy notice `loops/05-share.md`'s
+  legal minimum already requires once something is collected. Someone who
+  writes three posts a year and says so honestly does not want that pressure
+  on every page.
 
 ## Handing over the keys
 
