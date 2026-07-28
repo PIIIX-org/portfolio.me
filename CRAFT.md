@@ -163,6 +163,18 @@ ceiling for everything else.
 | Generated-then-treated imagery | Image tool output run through in-browser treatment | `§10`. Duotone, displacement, dithering, or grain applied in the browser. Raw output never reaches the page |
 | Generated illustration | One consistent line weight, palette, and construction logic applied to every drawn mark | The counterpart to generated-then-treated imagery for a subject where photorealism is wrong. Also how a signature icon gets made when a library glyph would not carry the identity, per `§10` |
 | The absence states | The 404, the empty blog index, the failed contact submission — pages nobody plans to design | The single likeliest place a visitor meets the generic template underneath everything, because it is the page nobody thought to design. Built from the same collision and concept as the rest of the site, never a framework default |
+| Availability status | A small, quiet signal near identity — never a generic green dot by reflex | A present-tense claim (`loops/09-rerun.md`'s rot check), so it needs an owner who updates it, not a badge set once at launch and forgotten |
+| Announcement bar | A dismissible, site-wide notice for something genuinely timely — a talk, a launch, a status change | Gated the same way the newsletter and comments are: build it when there is a real, dated thing to say, never as a permanent fixture |
+
+**Both of these are present-tense claims dressed as UI**, and
+`loops/09-rerun.md`'s rot check already exists to catch exactly this
+failure mode — "Currently at X" when they left in March applies just as
+directly to "Available for new work" six months after the calendar filled
+up. An announcement bar carries the same risk on a shorter clock: a banner
+about a talk that already happened is worse than no banner, since it is now
+evidence the site is unmaintained rather than evidence it is current.
+Dismissal for the bar persists the same way the dark-mode choice does — one
+value, `localStorage`, read before first paint.
 
 **One drawn thing and five drawn things need the same hand.** A single
 illustrated icon reads as intentional. Five illustrated icons in five different
