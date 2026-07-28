@@ -189,10 +189,12 @@ Not every publication feature is worth building by reflex. Apply the same
 judgment `§7` already asks of a technique: name what it does for the reader, or
 cut it.
 
-- **Table of contents, for a post long enough to need one.** Generated from
-  real headings, never hand-maintained. A post short enough to finish in one
-  sitting does not need one — it adds navigation to something the reader was
-  about to finish reading anyway.
+- **Table of contents, for a post or a case study long enough to need one.**
+  Generated from real headings, never hand-maintained. A case study runs
+  just as long as a blog post can, and the same mechanism and the same
+  threshold apply to both — nothing short enough to finish in one sitting
+  needs navigation added to something the reader was about to finish
+  reading anyway.
 - **Reading progress bar: default no.** It answers a question almost nobody was
   asking, and it is one more thing competing with the words for attention on a
   page whose entire job is the words. Build one only if the subject
