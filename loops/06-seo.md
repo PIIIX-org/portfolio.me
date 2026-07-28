@@ -191,7 +191,10 @@ search and answer engines read for eligibility and rich results:
 
 - **`WebSite`** on the home page, name and URL only. Add `SearchAction` only if
   the site actually has search — most portfolios do not, and a fake search
-  action is a `§5` violation like any other fabricated field.
+  action is a `§5` violation like any other fabricated field. Once real
+  search exists (`ARCHITECTURE.md`'s threshold, `CRAFT.md`'s technique),
+  this is where the real action goes — the schema was never the problem, a
+  fabricated one was.
 - **`BreadcrumbList`** on every page below the home page, for multi-page and
   blog sites (`ARCHITECTURE.md`).
 - **`Article`** on every blog post: `headline`, `datePublished`,
