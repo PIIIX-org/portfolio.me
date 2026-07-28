@@ -83,6 +83,27 @@ image of that section.
 Never compress multiple sections into one board. Eight sections means eight images.
 A compressed board hides exactly the detail the human needs to judge.
 
+### Breaking the grid on purpose
+
+Uniform grid submission is itself a tell. AI-generated and templated sites
+converge on symmetric, evenly-filled layouts because deviating from one requires
+a decision, and a default has none — the same reflex that produces the stock
+indigo gradient and center-aligned everything (`STYLES.md`'s guardrails).
+
+The test, for every element that deviates from the established grid, alignment,
+type scale, or whitespace rhythm:
+
+1. Name the specific rule being broken.
+2. Give a one-sentence reason that is not "to look less generic" — emphasis,
+   tension, a narrative beat, the collision itself.
+3. Confirm the same rule holds everywhere else in the layout except at that one
+   point.
+
+A deviation that cannot answer all three reverts to the grid. This applies to
+hero, about, and work-index sections — anywhere a visitor arrives to explore.
+It does not apply to task-focused UI: a contact form that breaks its own field
+alignment for tension is not this technique working, it is a bug.
+
 > ## Gate B1 — human decision
 >
 > Present the rendered images per concept, the palette with its sampled source, the
