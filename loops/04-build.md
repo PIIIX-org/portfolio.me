@@ -419,6 +419,7 @@ Run these before the loop closes:
 | **Console** | Zero errors, zero 404s |
 | **Absence states** | 404, empty blog index if there's one, and the failed-submission state are all built to the concept — none left as a framework default |
 | **Polish** | Scrollbar and `::selection` consume tokens, never browser defaults. Skip link hides off-screen, never `display: none`, and is prominently visible on focus |
+| **Print** | `Cmd+P` a case study. Chrome and motion are gone, colors are print-safe, link URLs are visible, nothing breaks mid-figure |
 
 ## Local screenshots
 
