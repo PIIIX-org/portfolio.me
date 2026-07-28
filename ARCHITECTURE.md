@@ -195,6 +195,11 @@ cut it.
   threshold apply to both — nothing short enough to finish in one sitting
   needs navigation added to something the reader was about to finish
   reading anyway.
+- **Back-to-top, past the same length test, no ask required.** Unlike
+  comments or the newsletter it commits the subject to nothing ongoing, so
+  skip it below the point where a visitor could scroll back in one gesture
+  and add it once a case study or post is long enough that the table of
+  contents above already earns its place. `CRAFT.md` covers how it moves.
 - **Reading progress bar: default no.** It answers a question almost nobody was
   asking, and it is one more thing competing with the words for attention on a
   page whose entire job is the words. Build one only if the subject
